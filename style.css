@@ -1,0 +1,21 @@
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+}
+
+nav{
+    display: flex;
+    background: yellowgreen;
+    margin: 0;
+    padding: 5px 0;
+    color: white;
+}
+
+nav li ul{
+    list-style: none;
+    padding: 0 23px;
+}

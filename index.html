@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "567px",
+            // => @media (min-width: 640px) { ... }
+
+            md: "768px",
+            // => @media (min-width: 768px) { ... }
+
+            lg: "1024px",
+            // => @media (min-width: 1024px) { ... }
+
+            xl: "1280px",
+            // => @media (min-width: 1280px) { ... }
+
+            "2xl": "1536px",
+            // => @media (min-width: 1536px) { ... }
+          },
+          extend: {
+            screens: {
+              xs: { min: "320px", max: "566px" },
+              // => @media (min-width: 320px) { ... }
+            },
+            colors: {
+              wtcolor: "#75d4e6ff",
+              wtcolor1: "pink",
+              white: "#ffffff",
+              purple: "#3f3cbb",
+              midnight: "#121063",
+              metal: "#565584",
+              tahiti: "#3ab7bf",
+              silver: "#ecebff",
+              "bubble-gum": "#ff77e9",
+              bermuda: "#78dcca",
+            },
+
+            animation: {
+              fadeIn: "fadeIn 1s ease-in-out forwards",
+              slideIn: "slideIn 1s ease-in-out forwards",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideIn: {
+                "%": { transform: "translateX(-100%)" },
+                "100%": { transform: "translateX(0)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- <div class="max-w-[1320px] mt-[50px] mx-auto bg-metal text-white p-4 text-center">
+    <h1>WELCOME TO THE WORLD</h1>
+  </div>
+    <div class="max-w-[1200px]  py-5 text-white mx-auto grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2
+     gap-5 my-7">
+        <div class="bg-[green] py-5 text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+        <div class="bg-[green] py-5 text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+        <div class="bg-[green] py-5 text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+        <div class="bg-[green] py-5 text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+        <div class="bg-[green] py-5 text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+        <div class="bg-[green] py-5 text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+        <div class="bg-[green] py-5 text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+        <div class="bg-[green] py-5 text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+    </div>
+    <div class="max-w-[1320px] grid grid-rows-4 grid-flow-col gap-5 mx-auto text-white">
+      <div class="bg-[purple] py-5 text-center row-span-2">1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+      <div class="bg-[purple] py-5 text-center">2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+      <div class="bg-[purple] py-5 text-center">3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+      <div class="bg-[purple] py-5 text-center">4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+      <div class="bg-[purple] py-5 text-center">5 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+      <div class="bg-[purple] py-5 text-center">6 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+      <div class="bg-[purple] py-5 text-center">7 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+      <div class="bg-[purple] py-5 text-center">8 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+    </div>
+   -->
+    <!-- rows & columns -->
+
+    <div class="max-w-[1320px] md:py-[80] py-5 flex mx-auto md:flex-row flex-col">
+      <div class="basis-[45%] pb-5 mx-auto">
+        <img src="https://images.pexels.com/photos/3844788/pexels-photo-3844788.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="w-full"/>
+      </div>
+      <div class="basis-[55%] px-5">
+        <h1 class="text-4xl pb-5">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </h1>
+        <p class="py-3 hover:animate-fadeIn duration-10000">
+          Donec dapibus mollis lacus sed ultrices. Pellentesque habitant morbi
+          tristique senectus et netus et malesuada fames ac turpis egestas.
+          Vestibulum diam velit, pellentesque sit amet consectetur ut, consequat
+          posuere est. Sed at nisl et tortor malesuada convallis. Vestibulum
+          placerat vestibulum consequat.
+        </p>
+        <p class="py-3 hover:animate-fadeIn duration-5000">
+          Donec dapibus mollis lacus sed ultrices. Pellentesque habitant morbi
+          tristique senectus et netus et malesuada fames ac turpis egestas.
+          Vestibulum diam velit, pellentesque sit amet consectetur ut, consequat
+          posuere est. Sed at nisl et tortor malesuada convallis. Vestibulum
+          placerat vestibulum consequat.
+        </p>
+        <p class="py-3 hover:animate-fadeIn duration-5000">
+          Donec dapibus mollis lacus sed ultrices. Pellentesque habitant morbi
+          tristique senectus et netus et malesuada fames ac turpis egestas.
+          Vestibulum diam velit, pellentesque sit amet consectetur ut, consequat
+          posuere est. Sed at nisl et tortor malesuada convallis. Vestibulum
+          placerat vestibulum consequat.
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-[1320px] mx-auto">
+      <h1 class="text-4xl text-center py-5">Featured Products</h1>
+    </div>
+    <div class="max-w-[1320px] mx-auto grid lg:grid-cols-4 md:grid-cols-2 gap-6 px-[20px]">
+      <div class="text-center shadow-lg rounded">
+        <div class="overflow-hidden">
+          <img
+            src="https://shoprex.com/images/srproducts/large/stylish-white-color-choker-necklace-jewelry-set-with-earrings-and-teeka-zv-19343_47580.jpg"
+            class="hover:scale-125 duration-1000"
+            alt="" />
+        </div>
+        <h3 class="py-2 text-2xl">Artificial Jwellery Design</h3>
+        <p class="py-2">Rs 6500.0</p>
+      </div>
+
+      <div class="text-center shadow-lg rounded">
+        <div class="overflow-hidden">
+          <img
+            src="https://shoprex.com/images/srproducts/large/stylish-white-color-choker-necklace-jewelry-set-with-earrings-and-teeka-zv-19343_47580.jpg"
+            class="hover:scale-125 duration-1000"
+            alt=""
+          />
+        </div>
+        <h3 class="py-2 text-2xl">Artificial Jwellery Design</h3>
+        <p class="py-2">Rs 6500.0</p>
+      </div>
+
+      <div class="text-center shadow-lg rounded">
+        <div class="overflow-hidden">
+          <img
+            src="https://shoprex.com/images/srproducts/large/stylish-white-color-choker-necklace-jewelry-set-with-earrings-and-teeka-zv-19343_47580.jpg"
+            class="hover:scale-125 duration-1000"
+            alt=""
+          />
+        </div>
+        <h3 class="py-2 text-2xl">Artificial Jwellery Design</h3>
+        <p class="py-2">Rs 6500.0</p>
+      </div>
+
+      <div class="text-center shadow-lg rounded">
+        <div class="overflow-hidden">
+          <img
+            src="https://shoprex.com/images/srproducts/large/stylish-white-color-choker-necklace-jewelry-set-with-earrings-and-teeka-zv-19343_47580.jpg"
+            class="hover:scale-125 duration-1000"
+            alt=""
+          />
+        </div>
+        <h3 class="py-2 text-2xl">Artificial Jwellery Design</h3>
+        <p class="py-2">Rs 6500.0</p>
+      </div>
+    </div>
+    <!-- hover effect -->
+
+    <div class="max-w-[1320px] ms:py[-80] py-5 mx-auto">
+      <h1 class="text-center text-4xl">Our Services</h1>
+    </div>
+    <div
+      class="max-w-[1200px] mx-auto py-[30px] grid lg:grid-cols-4 sm:grid-cols-2 gap-6"
+    >
+      <div
+        class="group shadow-lg p-4 text-center hover:bg-blue-500 hover:text-white duration-1000"
+      >
+        <i
+          class="fas fa-laptop-code text-2xl group-hover:text-white text-blue-500 duration-1000 animate-bounce"
+        ></i>
+        <h3 class="text-xl py-2">Web Design</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+      </div>
+      <div
+        class="group shadow-lg p-4 text-center hover:bg-blue-500 hover:text-white duration-1000"
+      >
+        <i
+          class="fas fa-laptop-code text-2xl group-hover:text-white text-blue-500 duration-1000 animate-bounce"
+        ></i>
+        <h3 class="text-xl py-2">Web Design</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+      </div>
+      <div
+        class="group shadow-lg p-4 text-center hover:bg-blue-500 hover:text-white duration-1000"
+      >
+        <i
+          class="fas fa-laptop-code text-2xl group-hover:text-white text-blue-500 duration-1000 animate-bounce"
+        ></i>
+        <h3 class="text-xl py-2">Web Design</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+      </div>
+      <div
+        class="group shadow-lg p-4 text-center hover:bg-blue-500 hover:text-white duration-1000"
+      >
+        <i
+          class="fas fa-laptop-code text-2xl group-hover:text-white text-blue-500 duration-1000 animate-bounce"
+        ></i>
+        <h3 class="text-xl py-2">Web Design</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+      </div>
+      <div
+        class="group shadow-lg p-4 text-center hover:bg-blue-500 hover:text-white duration-1000"
+      >
+        <i
+          class="fas fa-laptop-code text-2xl group-hover:text-white text-blue-500 duration-1000 animate-bounce"
+        ></i>
+        <h3 class="text-xl py-2">Web Design</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+      </div>
+      <div
+        class="group shadow-lg p-4 text-center hover:bg-blue-500 hover:text-white duration-1000"
+      >
+        <i
+          class="fas fa-laptop-code text-2xl group-hover:text-white text-blue-500 duration-1000 animate-bounce"
+        ></i>
+        <h3 class="text-xl py-2">Web Design</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+      </div>
+      <div
+        class="group shadow-lg p-4 text-center hover:bg-blue-500 hover:text-white duration-1000"
+      >
+        <i
+          class="fas fa-laptop-code text-2xl group-hover:text-white text-blue-500 duration-1000 animate-bounce"
+        ></i>
+        <h3 class="text-xl py-2">Web Design</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+      </div>
+      <div
+        class="group shadow-lg p-4 text-center hover:bg-blue-500 hover:text-white duration-1000"
+      >
+        <i
+          class="fas fa-laptop-code text-2xl group-hover:text-white text-blue-500 duration-1000 animate-bounce"
+        ></i>
+        <h3 class="text-xl py-2">Web Design</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+      </div>
+    </div>
+    <!-- animation -->
+  </body>
+</html>

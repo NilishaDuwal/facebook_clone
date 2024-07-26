@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vivo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              "hero-pattern":
+                "url('https://vivo.edu.np/assets/img/bg/carousel1.png')",
+            },
+            colors: {
+          clifford: "#da373d",
+          vivo: "#0c4da2",
+          vivopink: "#ef018d",
+        },
+            animation: {
+              slideIn: "slideIn 2s ease-out",
+            },
+            keyframes: {
+              slideIn: {
+                "0%": { transform: "translateX(-100%)", opacity: "0" },
+                "100%": { transform: "translateX(0)", opacity: "1" },
+              },
+            },
+          },
+        },
+        
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+      <nav class="navbar w-full mx-auto shadow-lg px-10 fixed bg-white z-[20]">
+        <div class="flex justify-center py-3 pb-4 gap-24">
+          <div class="shrink-0 ">
+            <img
+              src="https://vivo.edu.np/assets/img/logo/vivo.png"
+              alt=""
+              height="150px"
+              width="150px"
+            />
+           
+          </div> 
+          <button class="block md:hidden text-gray-600 focus:outline-none">
+                <svg class=" md:h-10 md:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+              </button>
+          <nav class="menus hidden md:flex flex text-sm text-vivo font-bold">
+            <ul class="w-full flex items-center space-x-8">
+              <li><a href="" class="hover:text-vivopink duration-1000">Home</a></li>
+              <li><a href="" class="hover:text-vivopink duration-1000">About Us<span><i class="fa-solid fa-chevron-down"></i></span></a></li>
+              <li><a href="" class="hover:text-vivopink duration-1000">Study Aborad<span><i class="fa-solid fa-chevron-down"></i></span></a></li>
+              <li><a href="" class="hover:text-vivopink duration-1000">Services<span><i class="fa-solid fa-chevron-down"></i></span></a></li>
+              <li><a href="" class="hover:text-vivopink duration-1000">Migration<span><i class="fa-solid fa-chevron-down"></i></span></a></li>
+              <li><a href="" class="hover:text-vivopink duration-1000">Language Preparation<span><i class="fa-solid fa-chevron-down"></i></span></a></li>
+              <li><a href="" class="hover:text-vivopink duration-1000">Gallery</a></li>
+              <li><a href="" class="hover:text-vivopink duration-1000">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </nav>
+      
+    <!-- hero -->
+    <section class="banner overflow-hidden mx-auto">
+      <div
+        class="h-[700px] bg-cover bg-center bg-local hover:bg-scale-125 transition-all duration-1000 cursor-pointer lg:shrink-0"
+        style="background-image: url('https://vivo.edu.np/assets/img/bg/carousel1.png')"
+      >
+        <div
+          class="text w-[41%] pl-96 gap-3 flex flex-col justify-center lg:justify-items-start"
+        >
+          <h3 class="text-white font-normal text-lg pt-64">
+            Now, Vivo will
+          </h3>
+          <h1 class="text-white font-bold text-5xl tracking-wide pt-2">Help To <br> Study Abroad</h1>
+          <p class="text-white font-normal text-base leading-relaxed tracking-wide text-left py-5">
+            We are well established consultancy located in the heart of
+            Kathmandu. We deal with Test Preparation and Study Aborad services.
+          </p>
+          <a
+            href="#"
+            class="bg-vivo w-[200px] h-[60px] text-white font-medium p-4 hover:bg-pink-600 duration-1000 justify-center flex gap-2"
+            >Book Now<i class="fa-solid fa-grip-lines-vertical text-lg text-center"></i><i class="fa-solid fa-arrow-right pt-[5px]"></i></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- about us -->
+    <section
+      class="max-w-[1160px] mx-auto py-10 flex gap-5 lg:flex-cols-2 "
+    >
+      <div class="w-1/2 px-5 flex flex-col">
+        <h3 class="text-vivopink font-medium text-md">
+          About Vivo Education Pvt.Ltd
+        </h3>
+        <h1 class="text-vivo font-[790] text-4xl">
+          9+ Years of Your Trust and Recommendation
+        </h1>
+        <p class="text-gray-500 font-normal text-md text-justify text-balance py-3">
+          We are well established consultancy located in the heart of Kathmandu.
+          We deal with Test Preparation and Study Aborad services.We are well
+          established consultancy located in the heart of Kathmandu. We deal
+          with Test Preparation and Study Aborad services.We are well
+          established consultancy located in the heart of Kathmandu. We deal
+          with Test Preparation and Study Aborad services.
+        </p>
+        <p class="text-gray-500 font-normal text-md text-justify text-balance pb-3">
+          We are well established consultancy located in the heart of Kathmandu.
+          We deal with Test Preparation and Study Aborad services.We are well
+          established consultancy located in the heart of Kathmandu. We deal
+          with Test Preparation and Study Aborad services.We are well
+          established consultancy located in the heart of Kathmandu. We deal
+          with Test Preparation and Study Aborad services.
+        </p>
+        <a
+          href=""
+          class="w-[130px] border-[1px] border-vivo text-vivo font-medium text-center py-3 rounded-md hover:text-vivopink hover:border-vivopink hover:bg-gray-100"
+          >READ MORE</a
+        >
+      </div>
+
+      <div class="w-1/2 h-fit flex flex-col gap-4 mx-auto h-fit">
+        <div>
+          <img
+            src="https://vivo.edu.np/assets/img/country-img/vivo2.jpg"
+            alt=""
+            class="w-[540px] h-[358px]"
+          />
+        </div>
+        <div class="flex gap-4 pl-7">
+          <img
+            src="https://vivo.edu.np/assets/img/country-img/c-4.jpg"
+            alt=""
+            class="w-[248px] h-[156px]"
+          />
+          <img
+            src="https://vivo.edu.np/assets/img/country-img/c-5.jpg"
+            alt=""
+            class="w-[248px] h-[156px]"
+          />
+        </div>
+      </div>
+
+    </section>
+
+    <!-- our services -->
+    <section>
+      <div class="heading max-w-[1320px] mx-auto animate-slideIn">
+        <h3 class="text-vivopink text-center font-medium text-md my-2">
+          Featured Services
+        </h3>
+        <h1 class="text-vivo font-[790] text-4xl my-2 text-center">
+          Our Services
+        </h1>
+      </div>
+      <div class="contents">
+      <div
+        class="max-w-[1200px] mx-auto my-16 py-[30px] grid lg:grid-cols-3 sm:grid-cols-2 gap-6 md:mx-auto"
+      >
+        <div
+          class="group shadow-xl bg-gray-100 flex flex-row gap-5 animate-slideIn"
+        >
+          <div>
+            <i
+              class="fa-solid fa-rocket h-[90%] py-6 px-3 text-5xl text-white bg-vivo"
+            ></i>
+          </div>
+          <div class="text-left py-4 text-gray-600">
+            <h3 class="text-xl py-2 font-bold">VISA ASSISTENCE</h3>
+            <p class="text-base pr-5">
+              Our proper planning ensures to achieve maximum.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="group shadow-xl bg-gray-100 flex flex-row gap-5 animate-slideIn"
+        >
+          <div>
+            <i
+              class="fa-solid fa-paper-plane h-[90%] py-6 px-3 text-5xl text-white bg-vivo"
+            ></i>
+          </div>
+          <div class="text-left py-4 text-gray-600">
+            <h3 class="text-xl py-2 font-bold">STUDY ABROAD</h3>
+            <p class="text-base pr-5">
+              For years, we have been helping to study their desired country
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="group shadow-xl bg-gray-100 flex flex-row gap-5 animate-slideIn"
+        >
+          <div>
+            <i
+              class="fa-solid fa-book h-[90%] py-6 px-3 text-5xl text-white bg-vivo"
+            ></i>
+          </div>
+          <div class="text-left py-4 text-gray-600">
+            <h3 class="text-xl py-2 font-bold">TEST PREPARATION</h3>
+            <p class="text-base pr-5">
+              Qualify yourself with various tests and get help in foreign scopes.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="group shadow-xl bg-gray-100 flex flex-row gap-5 animate-slideIn"
+        >
+          <div>
+            <i
+              class="fa-solid fa-download h-[90%] py-6 px-3 text-5xl text-white bg-vivo"
+            ></i>
+          </div>
+          <div class="text-left py-4 text-gray-600">
+            <h3 class="text-xl py-2 font-bold">ADMISSON GUIDE</h3>
+            <p class="text-base pr-5">
+              VIVO will help you with admission to various colleges.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="group shadow-xl bg-gray-100 flex flex-row gap-5 animate-slideIn"
+        >
+          <div>
+            <i
+              class="fa-solid fa-users h-[90%] py-6 px-3 text-5xl text-white bg-vivo"
+            ></i>
+          </div>
+          <div class="text-left py-4 text-gray-600">
+            <h3 class="text-xl py-2 font-bold">CAREER COUNSELLING</h3>
+            <p class="text-base pr-5">
+              For years, we have been helping people to choose their career.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="group shadow-xl bg-gray-100 flex flex-row gap-5 animate-slideIn"
+        >
+          <div>
+            <i
+              class="fa-solid fa-cloud h-[90%] py-6 px-3 text-5xl text-white bg-vivo"
+            ></i>
+          </div>
+          <div class="text-left py-4 text-gray-600">
+            <h3 class="text-xl py-2 font-bold">INSURANCE</h3>
+            <p class="text-base pr-5">
+              We also offer insurance. Explore more of our insurance service.
+            </p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+   
+   <!-- Study Abroad -->
+    <section class="h-[800px] py-10">
+      <div
+        class="h-[400px] text-white bg-vivo text-center p-8 flex flex-col"
+      >
+        <h3 class="text-sm font-semibold">Study Abroad</h3>
+        <h1 class="text-4xl font-bold">Select Your Favorite Country</h1>
+        <div
+          class="card w-full flex flex-row justify-center gap-12 mx-auto my-40"
+        >
+        <i class="fa-solid fa-arrow-right text-black h-[25px] w-[25px] flex items-right rounded-full text-center text-lg bg-gray-500 hover:text-vivopink"></i
+          >
+          <div
+            class="card container max-w-[250px] bg-white text-left flex flex-col gap-3 shadow-lg pb-5 overflow-hidden"
+          >
+         
+          <div class="overflow-hidden">
+            <img
+              src="https://vivo.edu.np/assets/img/country-img/c-3.jpg"
+              alt=""
+              class="hover:scale-125 transition-all duration-1000 cursor-pointer"
+            /></div>
+            <a href="" class="text-vivo px-3 text-xl font-semibold hover:text-vivopink"
+              >New Zealand</a
+            >
+            <p class="text-gray-500 px-3 text-left">
+              New Zealand is an island country in the southwestern pacific
+              ocean. It consists of two main landmasses-the North Island...
+            </p>
+            <a
+            href=""
+            class="text-vivo px-3 font-bold flex flex-row gap-2 items-center hover:text-vivopink"
+            >Read more <span> <i class="fa-solid fa-arrow-right text-vivo hover:text-vivopink"></i
+          ></span></a>
+          </div>
+
+          <div
+            class="card container max-w-[250px] bg-white text-left flex flex-col gap-3 shadow-lg overflow-hidden"
+          >
+          <div class="overflow-hidden">
+            <img
+              src="https://vivo.edu.np/assets/img/country-img/c-1.jpg"
+              alt=""
+              class="hover:scale-125 transition-all duration-1000 cursor-pointer"
+            /></div>
+            <a href="" class="text-vivo px-3 text-xl font-semibold hover:text-vivopink"
+              >Australia</a
+            >
+            <p class="text-gray-500 px-3 text-left">
+              New Zealand is an island country in the southwestern pacific
+              ocean. It consists of two main landmasses-the North Island...
+            </p>
+            <a
+              href=""
+              class="text-vivo px-3 font-bold flex flex-row gap-2 items-center hover:text-vivopink"
+              >Read more <span> <i class="fa-solid fa-arrow-right text-vivo hover:text-vivopink"></i
+            ></span></a>
+          </div>
+
+          <div
+            class="card container max-w-[250px] bg-white text-left flex flex-col gap-3 shadow-lg overflow-hidden"
+          >
+          <div class="overflow-hidden">
+            <img
+              src="https://vivo.edu.np/assets/img/country-img/c-2.jpg"
+              alt=""
+              class="hover:scale-125 transition-all duration-1000 cursor-pointer"
+            /></div>
+            <a href="" class="text-vivo px-3 text-xl font-semibold hover:text-vivopink"
+              >United States</a
+            >
+            <p class="text-gray-500 px-3 text-left">
+              New Zealand is an island country in the southwestern pacific
+              ocean. It consists of two main landmasses-the North Island...
+            </p>
+            <a
+              href=""
+              class="text-vivo px-3 font-bold flex flex-row gap-2 items-center hover:text-vivopink"
+              >Read more <span> <i class="fa-solid fa-arrow-right text-vivo hover:text-vivopink"></i
+            ></span></a>
+          </div>
+
+          <div
+            class="card container max-w-[250px] bg-white text-left flex flex-col gap-3 shadow-lg overflow-hidden"
+          >
+          <div class="overflow-hidden">
+            <img
+              src="https://vivo.edu.np/assets/img/country-img/c-4.jpg"
+              alt=""
+              class="hover:scale-125 transition-all duration-1000 cursor-pointer"
+            /></div>
+            <a href="" class="text-vivo px-3 text-xl font-semibold hover:text-vivopink"
+              >Canada</a
+            >
+            <p class="text-gray-500 px-3 text-left">
+              New Zealand is an island country in the southwestern pacific
+              ocean. It consists of two main landmasses-the North Island...
+            </p>
+            <a
+            href=""
+            class="text-vivo px-3 font-bold flex flex-row gap-2 items-center hover:text-vivopink"
+            >Read more <span> <i class="fa-solid fa-arrow-right text-vivo hover:text-vivopink"></i
+          ></span></a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- our achievement -->
+    <section class="w-full mx-auto bg-vivo overflow-hidden">
+      <div>
+        <img src="https://vivo.edu.np/assets/img/bg/bg2.jpg" alt="" class="absolute opacity-[20%] w-full size-[300px] ">
+      </div>
+      <div class="header flex flex-col items-center py-10">
+        <h3 class="text-medium font-semibold text-white">Our Achievement</h3>
+        <h1 class="text-white text-4xl font-bold">So Far We Have Achieved</h1>
+      </div>
+      <div class="flex justify-center gap-32 py-5 pb-16 z-[20]">
+        <div class="text-center flex flex-col gap-3">
+          <p class="text-white text-5xl font-semibold">25k+</p>
+          <p class="text-white text-lg font-semibold">Happy Students</p>
+        </div>
+        <div class="text-center flex flex-col gap-3">
+          <p class="text-white text-5xl font-semibold">80+</p>
+          <p class="text-white text-lg font-semibold">Countries Affiliation</p>
+        </div>
+        <div class="text-center flex flex-col gap-3">
+          <p class="text-white text-5xl font-semibold">360</p>
+          <p class="text-white text-lg font-semibold">Top University Partner</p>
+        </div>
+        <div class="text-center flex flex-col gap-3">
+          <p class="text-white text-5xl font-semibold">23k+</p>
+          <p class="text-white text-lg font-semibold">Visa & Immigration</p>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- Journey -->
+    <main class="journey py-10 pb-8">
+      <div>
+        <img src="https://vivo.edu.np/assets/img/bg/background_globe.png" alt="" class="absolute opacity-[50%] w-full size-full ">
+      </div>
+      <section class="heading text-center pb-10">
+        <p class="text-vivopink text-base font-medium">Journey</p>
+        <h1 class="text-vivo text-4xl font-bold">Your Journey to Abroad Education</h1>
+      </section>
+
+      <section class="flex flex-row justify-center gap-16">
+        <section class="left flex flex-col items-center gap-10">
+          <div class="left flex flex-col items-right">
+            <img src="https://vivo.edu.np/assets/img/bg/obj.png" alt="" class="w-[145px] h-[123px] ">
+          </div>
+          
+          <div class="w-[445px] flex flex-col gap-2 text-left">
+            <h2 class="text-gray-700 text-2xl font-medium">Admission Guidance</h2>
+            <p class="text-base text-gray-500 leading-relaxed">Whether you're looking for a program, university, or country according to your profile, our career counselors can offer advice and guidance.</p>
+          </div>
+
+          <div class="left2 flex flex-col items-center">
+            <img src="https://vivo.edu.np/assets/img/bg/obj3.png" alt="" class="w-[145px] h-[123px] ">
+          </div>
+          
+          <div class="w-[445px] flex flex-col gap-2 text-left">
+            <h2 class="text-gray-700 text-2xl font-medium">Letter Of Acceptance</h2>
+            <p class="text-base text-gray-500 leading-relaxed">As soon as you submit your application, the university will issue an offer letter tailored to your profile. Gateway International will keep you updated on each step of your application so you can get a final acceptance letter.</p>
+          </div>
+
+          <div class="left3 flex flex-col items-center">
+            <img src="https://vivo.edu.np/assets/img/bg/obj5.png" alt="" class="w-[145px] h-[123px] ">
+          </div>
+          
+          <div class="w-[445px] flex flex-col gap-2 text-left">
+            <h2 class="text-gray-700 text-2xl font-medium">Fly And Live Your Dreams</h2>
+            <p class="text-base text-gray-500 leading-relaxed">After receiving your visa approval, it’s time to travel to your dream country. Our staff will take care of all your travel arrangements and guide you throughout the process.</p>
+          </div>
+        </section>
+
+        <section class="center">
+          <img src="https://vivo.edu.np/assets/img/bg/obj1.png" alt="" class="size-full">
+        </section>
+
+        <section class="right flex flex-col items-center gap-10">
+        <div class="w-[445px] flex flex-col gap-2 text-left">
+          <h2 class="text-gray-700 text-2xl font-medium">Book a counselling session</h2>
+          <p class="text-base text-gray-500 leading-relaxed">In addition to telephone & video counseling, Gateway International provides flexible time slots that are chosen by the user for guiding you through the various options for studying across the globe.</p>
+        </div>
+        <div class="right flex flex-col items-right">
+          <img src="https://vivo.edu.np/assets/img/bg/obj2.png" alt="" class="w-[145px] h-[123px] ">
+        </div>
+        <div class="w-[445px] flex flex-col gap-2 text-left">
+          <h2 class="text-gray-700 text-2xl font-medium">Submit Your Application</h2>
+          <p class="text-base text-gray-500 leading-relaxed">We will assist you in submitting your applications at your preferred university for admission after you have selected the right course and university.</p>
+        </div>
+        <div class="right flex flex-col items-right">
+          <img src="https://vivo.edu.np/assets/img/bg/obj4.png" alt="" class="w-[145px] h-[123px] ">
+        </div>
+        <div class="w-[445px] flex flex-col gap-2 text-left">
+          <h2 class="text-gray-700 text-2xl font-medium">Start Your Visa Process</h2>
+          <p class="text-base text-gray-500 leading-relaxed">Our visa team will assist you throughout the entire visa process from documentation to the visa interview, we take care of it all for you!</p>
+        </div>
+        <div class="right flex flex-col items-right">
+          <img src="https://vivo.edu.np/assets/img/bg/obj6.png" alt="" class="w-[145px] h-[123px] ">
+        </div>
+       
+      </section>
+
+      </section>
+
+      
+    </main>
+
+    <!-- Choose us -->
+     <main class="chooseUs mx-auto bg-vivo py-10">
+      <section class="heading flex flex-col items-center pb-5">
+        <p class="text-medium font-semibold text-white">Choose Us</p>
+        <h1 class="text-white text-4xl font-bold">Why choose us</h1>
+      </section>
+      <div class=" focus:outline-none">
+        <img src="https://vivo.edu.np/assets/img/bg/arrow.png" alt="" class="absolute pl-8 pt-16">
+      </div>
+      
+        <section class="flex justify-center">           
+
+        <section class="z-10 grid grid-cols-3 lg:grid-col-1 gap-[5rem]">
+          <div class="w-[300px] h-[300px] rounded-[50%] flex justify-center items-center bg-white m-8 mx-auto ">
+            <div class="container w-[250px] h-[250px] rounded-[50%] border-[5px] border-gray-300 hover:border-vivo flex flex-col justify-center items-center p-2 gap-2">
+              <h3 class="text-vivo text-lg font-bold">Distinctive & Different</h3>
+              <p class="text-gray-400 text-center text-sm leading-relaxed">We help students get familiar with the country they intend to study which is a must for international students.</p>
+            </div>
+          </div>
+    
+          <div class=" w-[300px] h-[300px] rounded-[50%] flex justify-center items-center bg-white m-8 mx-auto">
+            <div class="container w-[250px] h-[250px] rounded-[50%] border-[5px] border-gray-300 hover:border-vivo flex flex-col justify-center items-center p-2 gap-2">
+              <h3 class="text-vivo text-lg font-bold">Get Free Counselling</h3>
+              <p class="text-gray-400 text-center text-sm leading-relaxed">Get a chance to find your field after joining us. We provide counselling to students seeking and guidance to study abroad.</p>
+            </div>
+          </div>
+    
+          <div class=" w-[300px] h-[300px] rounded-[50%] flex justify-center items-center bg-white m-8 mx-auto">
+            <div class="container w-[250px] h-[250px] rounded-[50%] border-[5px] border-gray-300 hover:border-vivo flex flex-col justify-center items-center p-2 gap-2">
+              <h3 class="text-vivo text-lg font-bold">Personal Attention</h3>
+              <p class="text-gray-400 text-center text-sm leading-relaxed">we strive to give wholehearted personal attention to every single student in friendly manner.</p>
+            </div>
+          </div>
+        </section>
+
+
+    </section>
+
+      
+
+     </main>
+
+     <!-- Testimonials -->
+     <section class="container mx-auto py-10 overflow-hidden">
+      <div class="heading flex flex-col items-center pb-5">
+        <p class="text-medium font-semibold text-vivopink">Testimonials</p>
+        <h1 class="text-vivo text-4xl font-bold">What Clients Say About Us</h1>
+      </div>
+
+      <div class="flex mx-auto justify-center gap-8 px-48 py-8">
+      <div class="card w-[350px] h-[370px] bg-vivo">
+        <p class="text-white p-8 text-lg italic leading-relaxed">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolor iste! Deserunt eum quae aperiam incidunt, recusandae repellendus iusto fugit, velit amet atque optio maxime aliquid. "</p>
+
+        <div class="flex gap-8">
+          <div class="image pl-8">
+            <img src="https://vivo.edu.np/assets/img/testimonial/ts-1.png" alt="" >
+          </div>
+          <div>
+            <p class="text-xl font-bold text-white">Arjun Singh</p>
+            <p class="text-base font-normal text-white">Nepal</p>
+            <div>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-[350px] h-[370px] bg-vivo">
+        <p class="text-white p-8 text-lg italic leading-relaxed">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolor iste! Deserunt eum quae aperiam incidunt, recusandae repellendus iusto fugit, velit amet atque optio maxime aliquid. "</p>
+
+        <div class="flex gap-8">
+          <div class="image pl-8">
+            <img src="https://vivo.edu.np/assets/img/testimonial/ts-1.png" alt="" >
+          </div>
+          <div>
+            <p class="text-xl font-bold text-white">Arjun Singh</p>
+            <p class="text-base font-normal text-white">Nepal</p>
+            <div>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="card w-[350px] h-[370px] bg-vivo">
+        <p class="text-white p-8 text-lg italic leading-relaxed">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolor iste! Deserunt eum quae aperiam incidunt, recusandae repellendus iusto fugit, velit amet atque optio maxime aliquid. "</p>
+
+        <div class="flex gap-8">
+          <div class="image pl-8">
+            <img src="https://vivo.edu.np/assets/img/testimonial/ts-1.png" alt="" >
+          </div>
+          <div>
+            <p class="text-xl font-bold text-white">Arjun Singh</p>
+            <p class="text-base font-normal text-white">Nepal</p>
+            <div>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+              <i class="fa-solid fa-star text-yellow-600"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     </section>
+
+     <!-- Our partners -->
+      <section class="partners mx-auto bg-vivo">
+        <div>
+          <img src="https://vivo.edu.np/assets/img/bg/partner_bg2.jpg" alt="" class="absolute opacity-[10%] w-full size-[300px]">
+        </div>
+        <div class="header flex flex-col items-center py-10">
+          <p class="text-medium font-semibold text-white">Our Partners</p>
+          <h1 class="text-white text-4xl font-bold">Who are Our Partners</h1>
+        </div>
+
+        <div class="items flex  gap-5 justify-center py-10">
+        <div class="w-[250px] h-[120px] p-5 pb-8 bg-white rounded-lg">
+          <img src="https://vivo.edu.np/assets/img/partners/partner-0%20copy.png" alt="" class="">
+        </div>
+        <div class="w-[250px] h-[120px] p-5 pb-8 bg-white rounded-lg">
+          <img src="https://vivo.edu.np/assets/img/partners/partner-2copy.png" alt="" class="">
+        </div> 
+        <div class="w-[250px] h-[120px] p-5 pb-8 bg-white rounded-lg">
+          <img src="https://vivo.edu.np/assets/img/partners/partner3-m.png" alt="" class="">
+        </div>  
+        <div class="w-[250px] h-[120px] p-5 pb-8 bg-white rounded-lg">
+          <img src="https://vivo.edu.np/assets/img/partners/partner-4.png" alt="" class="">
+        </div>  
+        </div>
+        
+      </section>
+  </body>
+
+  <!-- footer -->
+  <footer class="flex flex-col">
+   <section class="top flex flex-row py-  justify-center gap-32">
+    <section class="left flex flex-col items-center py-5 gap-5">
+      <img
+        src="https://vivo.edu.np/assets/img/logo/vivo.png"
+        alt=""
+        height="180px"
+        width="180px"
+      />
+      <div class="socialmedia flex flex-row gap-4">
+        <a
+        href=""
+        class="facebook border-[1px] border-gray-500 rounded-full text-center text-vivo py-1 px-2 w-[34px] inline"
+        ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a
+        href=""
+        class="twitter border-[1px] border-gray-500 rounded-full text-center text-vivo py-1 px-2 w-[34px] inline"
+        ><i class="fa-brands fa-twitter"></i></i
+        ></a>
+        <a
+        href=""
+        class="instagram border-[1px] border-gray-500 rounded-full text-center text-vivo py-1 px-2 w-[34px] inline"
+        ><i class="fa-brands fa-instagram"></i></i
+        ></a>
+        <a
+        href=""
+        class="youtube border-[1px] border-gray-500 rounded-full text-center text-vivo py-1 px-2 w-[34px] inline"
+        ><i class="fa-brands fa-youtube"></i></i
+        ></a>
+      </div>
+    </section>
+
+    <section class="right flex flex-row gap-16 py-4">
+      <div class="flex flex-col gap-3">
+        <h2 class="text-lg text-vivo font-semibold tracking-wider">Migration</h2>
+        <a href="" class="font-normal text-gray-500 tracking-wider hover:text-vivopink">Partner Visa</a>
+        <a href="" class="font-normal text-gray-500 tracking-wider hover:text-vivopink">Visitor Visa</a>
+        <a href="" class="font-normal text-gray-500 tracking-wider hover:text-vivopink">Permanent Visa</a>
+        <a href="" class="font-normal text-gray-500 tracking-wider hover:text-vivopink">Visa Extension</a>
+      </div>
+      <div class="flex flex-col gap-3">
+        <h2 class="text-lg text-vivo font-semibold tracking-wider">Quick Links</h2>
+        <a href="" class="text-gray-500 tracking-wider hover:text-vivopink">About Us</a>
+        <a href="" class="text-gray-500 tracking-wider hover:text-vivopink">Contact</a>
+        <a href="" class="text-gray-500 tracking-wider hover:text-vivopink">Study Abroad</a>
+        <a href="" class="text-gray-500 tracking-wider hover:text-vivopink">Services</a>
+      </div>
+      <div class="flex flex-col gap-3">
+        <h2 class="text-lg text-vivo font-semibold tracking-wider">Contact Us</h2>
+        <a href="" class="text-gray-500 tracking-wider flex flex-row gap-1 hover:text-vivopink"><i class="text-vivo fa-solid fa-location-pin"></i>Putalisadak, Kathmandu</a>
+        <a href="" class="text-gray-500 tracking-wider flex flex-row gap-1 hover:text-vivopink"><i class="text-vivo fa-solid fa-phone"></i>+977 01-4241358</a>
+        <a href="" class="text-gray-500 tracking-wider flex flex-row gap-1 hover:text-vivopink"><i class="text-vivo fa-solid fa-envelope"></i>info@vivo.edu.np</a>
+        <a href="" class="text-gray-500 tracking-wider flex flex-row gap-1 hover:text-vivopink"><i class="text-vivo fa-solid fa-envelope"></i>vivoedu2013@gmail.com</a>
+      </div>
+      <section>
+
+      </section>
+    </section>
+   </section>
+
+    <!-- copyright -->
+      <section class="bttom text-center text-white font-base py-3 bg-[#002649] ">
+      <p>Copyright © 2022. All Rights Reserved | Designed & Developed By <a href="" class="text-blue-500 hover:text-blue-800">Prabhidi Enterprise</a></p>
+    </section>
+  </footer>
+
+  
+</html>

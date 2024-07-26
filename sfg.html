@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container mx-auto px-4">
+    <header class="py-4">
+      <!-- Responsive navigation example -->
+      <nav class="flex items-center justify-between">
+        <div class="flex items-center">
+          <div class="mr-4">
+            <!-- Your logo -->
+            <img class="h-8 w-[150px] h-[150px]" src="https://vivo.edu.np/assets/img/logo/vivo.png" alt="Logo">
+          </div>
+          <!-- Menu button for smaller screens -->
+          <button class="block lg:hidden text-gray-600 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Menu items for larger screens -->
+        <div class="hidden lg:flex items-center space-x-4">
+          <a href="#" class="text-gray-800 hover:text-gray-600">Home</a>
+          <a href="#" class="text-gray-800 hover:text-gray-600">About</a>
+          <a href="#" class="text-gray-800 hover:text-gray-600">Services</a>
+          <a href="#" class="text-gray-800 hover:text-gray-600">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main class="py-8">
+      <!-- Main content area -->
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Example grid items -->
+        <div class="bg-gray-200 p-4 rounded-lg">
+          <h2 class="text-lg font-semibold mb-2">Item 1</h2>
+          <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="bg-gray-200 p-4 rounded-lg">
+          <h2 class="text-lg font-semibold mb-2">Item 2</h2>
+          <p class="text-gray-700">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="bg-gray-200 p-4 rounded-lg">
+          <h2 class="text-lg font-semibold mb-2">Item 3</h2>
+          <p class="text-gray-700">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </main>
+    <footer class="py-4 text-center text-gray-600">
+      <!-- Footer content -->
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
+  

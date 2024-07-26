@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <section class="banner overflow-hidden mx-auto">
+        
+          <div
+            class="text w-[41%] z-[10] bg-green-400 pl-96 gap-3 flex flex-col justify-center lg:justify-items-start"
+          >
+            <h3 class="text-white font-normal text-lg">
+              Now, Vivo will
+            </h3>
+            <h1 class="text-white font-bold text-5xl tracking-wide pt-2">Help To <br> Study Abroad</h1>
+            <p class="text-white font-normal text-base leading-relaxed tracking-wide text-left py-5">
+              We are well established consultancy located in the heart of
+              Kathmandu. We deal with Test Preparation and Study Aborad services.
+            </p>
+            <a
+              href="#"
+              class="bg-black w-[200px] h-[60px] text-white font-medium p-4 hover:bg-pink-600 duration-1000 justify-center flex gap-2"
+              >Book Now<i class="fa-solid fa-grip-lines-vertical text-lg text-center"></i><i class="fa-solid fa-arrow-right pt-[5px]"></i>
+              </a>
+          </div>
+
+          <div
+          class=" hover:bg-scale-125 transition-all duration-1000 cursor-pointer lg:shrink-0"
+         >
+            <img src="https://vivo.edu.np/assets/img/bg/carousel1.png" alt="" class="absolute h-[700px] w-full">
+            </div>
+      </section>  
+</body>
+</html>

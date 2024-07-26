@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-zinc-900">
+    <section class="flex flex-col gap-2">
+      <section class="navbar">
+        <!-- navbar -->
+        <nav
+          class="w-full fixed top-0 my-auto px-5 py-2 bg-zinc-800 flex justify-between shadow-[0_1.5px_1px_-1px_rgba(0,0,0,0.3)] shadow-white z-10"
+        >
+          <!-- left-nav -->
+          <div class="flex gap-2">
+            <a href="">
+              <img class="w-10 rounded-full" src="img/facebook.jpeg" alt=""
+            /></a>
+
+            <div
+              class="flex bg-zinc-600 rounded-3xl sm:px-1 xl:px-4 items-center transition-all ease-in-out duration-300 py-1"
+            >
+              <button
+                class="p-[9px] flex justify-center items-center rounded-1/2 gap-5"
+              >
+                <svg
+                  class="size-5 p-[1px]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="rgb(241 245 249)"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  />
+                </svg>
+              </button>
+              <input
+                class="py-1 sm:hidden xl:block rounded-r-3xl h-full bg-zinc-600 outline-none transition-all ease-in-out duration-500"
+                type="text"
+                placeholder="Search Facebook"
+              />
+            </div>
+          </div>
+
+          <!-- mid-nav -->
+          <div
+            class="my-auto relative right-10 items-center justify-center sm:hidden lg:flex gap-24"
+          >
+            <div class="homepage">
+              <svg
+                class="size-7"
+                stroke=""
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20,8h0L14,2.74a3,3,0,0,0-4,0L4,8a3,3,0,0,0-1,2.26V19a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3V10.25A3,3,0,0,0,20,8ZM14,20H10V15a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1Zm5-1a1,1,0,0,1-1,1H16V15a3,3,0,0,0-3-3H11a3,3,0,0,0-3,3v5H6a1,1,0,0,1-1-1V10.25a1,1,0,0,1,.34-.75l6-5.25a1,1,0,0,1,1.32,0l6,5.25a1,1,0,0,1,.34.75Z"
+                  fill="rgb(59 130 246)"
+                />
+              </svg>
+              <div
+          class="mx-auto w-[4.5rem] sm:hidden lg:flex relative top-[1.1rem] right-[1.5rem] h-[2px] bg-blue-500 z-20"
+        ></div>
+            </div>
+
+            <div class="reels">
+              <svg
+                class="size-7 rounded-lg"
+                enable-background="new 0 0 48 48"
+                height=""
+                id="Layer_1"
+                versiong="1.1"
+                viewBox="0 0 48 48"
+                width="2rem"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M46,37H2c-0.553,0-1-0.447-1-1V8c0-0.552,0.447-1,1-1h44c0.553,0,1,0.448,1,1v28  C47,36.553,46.553,37,46,37z M45,9H3v26h42V9z M21,16c0.214,0,0.4,0.082,0.563,0.196l7.771,4.872C29.72,21.205,30,21.566,30,22  c0,0.325-0.165,0.601-0.405,0.783l-7.974,4.981C21.449,27.904,21.238,28,21,28c-0.553,0-1-0.447-1-1V17C20,16.448,20.447,16,21,16z   M15,39h18c0.553,0,1,0.447,1,1s-0.447,1-1,1H15c-0.553,0-1-0.447-1-1S14.447,39,15,39z"
+                  stroke="rgb(212 212 216)"
+                  fill="rgb(212 212 216)"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+
+            <div class="groups">
+              <svg
+                class="p-[1px] size-7 border border-[rgb(212 212 216)] rounded-[50%]"
+                enable-background="new -0.288 -24.675 141.732 141.732"
+                fill="rgb(212 212 216)"
+                width="2rem"
+                height="2rem"
+                id="Livello_1"
+                version="1.1"
+                viewBox="-0.288 -24.675 141.732 141.732"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g id="Livello_98">
+                  <path
+                    d="M37.164,60.964C17.418,61.378,1.395,74.75,0,91.622h18.693l0.009-0.104c0.9-10.901,6.48-21.019,15.712-28.487   C35.305,62.312,36.223,61.622,37.164,60.964 M44.62,27.247c0-2.408,0.255-4.747,0.731-6.98c-2.211-1.199-4.662-1.872-7.244-1.872   c-9.761,0-17.673,9.526-17.673,21.279c0,11.395,7.437,20.695,16.78,21.253c4.202-2.928,8.886-5.22,13.868-6.815   c1.054-1.366,1.952-2.902,2.681-4.568C48.203,44.364,44.62,36.296,44.62,27.247 M92.995,26.994C92.995,12.085,82.958,0,70.578,0   C58.197,0,48.161,12.085,48.161,26.994c0,13.36,8.063,24.457,18.651,26.61C42.957,55.19,23.947,71.714,22.238,92.38h96.68   c-1.71-20.666-20.719-37.19-44.576-38.775C84.93,51.451,92.995,40.357,92.995,26.994 M120.72,40.436   c0-11.753-7.912-21.28-17.674-21.28c-2.583,0-5.031,0.676-7.243,1.872c0.479,2.233,0.729,4.573,0.729,6.98   c0,9.05-3.582,17.117-9.144,22.293c0.726,1.666,1.627,3.202,2.678,4.571c4.984,1.596,9.667,3.888,13.868,6.813   C113.285,61.13,120.72,51.829,120.72,40.436 M141.156,92.383c-1.396-16.872-17.418-30.243-37.164-30.657   c0.94,0.657,1.857,1.346,2.749,2.066c9.23,7.469,14.812,17.586,15.713,28.484l0.009,0.104L141.156,92.383L141.156,92.383z"
+                  />
+                </g>
+                <g id="Livello_1_1_" />
+              </svg>
+            </div>
+
+            <div class="games">
+              <svg
+                class="size-8"
+                fill="rgb(212 212 216)"
+                width="2rem"
+                viewBox="0 0 640 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M448 64H192C85.96 64 0 149.1 0 256s85.96 192 192 192h256c106 0 192-85.96 192-192S554 64 448 64zM247.1 280h-32v32c0 13.2-10.78 24-23.98 24c-13.2 0-24.02-10.8-24.02-24v-32L136 279.1C122.8 279.1 111.1 269.2 111.1 256c0-13.2 10.85-24.01 24.05-24.01L167.1 232v-32c0-13.2 10.82-24 24.02-24c13.2 0 23.98 10.8 23.98 24v32h32c13.2 0 24.02 10.8 24.02 24C271.1 269.2 261.2 280 247.1 280zM431.1 344c-22.12 0-39.1-17.87-39.1-39.1s17.87-40 39.1-40s39.1 17.88 39.1 40S454.1 344 431.1 344zM495.1 248c-22.12 0-39.1-17.87-39.1-39.1s17.87-40 39.1-40c22.12 0 39.1 17.88 39.1 40S518.1 248 495.1 248z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- right-nav -->
+
+          <div class="flex gap-2">
+            <div
+              class="add_post w-[2.7rem] h-[2.7rem] p-2 rounded-full bg-zinc-600 flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="rgb(241 245 249)"
+                class="size-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+            </div>
+
+            <div
+              class="messenger w-[2.7rem] h-[2.7rem] p-3 bg-zinc-600 flex items-center justify-center rounded-[50%]"
+            >
+              <svg
+                class="size-6 text-white"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M256.6 8C116.5 8 8 110.3 8 248.6c0 72.3 29.7 134.8 78.1 177.9 8.4 7.5 6.6 11.9 8.1 58.2A19.9 19.9 0 0 0 122 502.3c52.9-23.3 53.6-25.1 62.6-22.7C337.9 521.8 504 423.7 504 248.6 504 110.3 396.6 8 256.6 8zm149.2 185.1l-73 115.6a37.4 37.4 0 0 1 -53.9 9.9l-58.1-43.5a15 15 0 0 0 -18 0l-78.4 59.4c-10.5 7.9-24.2-4.6-17.1-15.7l73-115.6a37.4 37.4 0 0 1 53.9-9.9l58.1 43.5a15 15 0 0 0 18 0l78.4-59.4c10.4-8 24.1 4.5 17.1 15.6z"
+                />
+              </svg>
+            </div>
+
+            <div
+              class="notification w-[2.7rem] h-[2.7rem] p-3 flex items-center justify-center bg-zinc-600 rounded-[50%]"
+            >
+              <svg
+                class="size-6"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                fill="white"
+              >
+                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M224 0c-17.7 0-32 14.3-32 32l0 19.2C119 66 64 130.6 64 208l0 18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416l384 0c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8l0-18.8c0-77.4-55-142-128-156.8L256 32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3l-64 0-64 0c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z"
+                />
+              </svg>
+            </div>
+
+            <div
+              class="profile relative flex items-center justify-center rounded-[50%]"
+            >
+              <img class="size-10 rounded-[50%]" src="img/random.jpeg" alt="" />
+              <svg
+                class="absolute bottom-0 right-0 border-2 border-gray-900 bg-zinc-600 size-5 p-[2px] rounded-[50%]"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                fill="white"
+              >
+                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                />
+              </svg>
+            </div>
+          </div>
+        </nav>
+
+        
+      </section>
+
+      <section class="main_page w-full mx-auto flex justify-between gap-48">
+
+        <!-- sidebar -->
+        <div class="sidebar fixed top-16 w-1/6 h-fit px-5 sm:hidden xl:flex flex-col gap-4 py-3">
+
+          <div class="profile flex items-center justify-start gap-3 my-auto">
+            <img class="size-10 rounded-[50%]" src="img/random.jpeg" alt="">
+            <p class="text-white text-base font-semibold">Profile Name</p>
+          </div>
+
+          <div class="friends flex items-center justify-start gap-3 my-auto">
+            <img class="size-10 rounded-[50%]" src="img/friends.png" alt="">
+            <p class="text-white text-base font-semibold">Friends</p>
+          </div>
+
+          <div class="memories flex items-center justify-start gap-3 my-auto">
+            <svg class="size-9" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#f2f5f8;}.cls-2{fill:#2e58ff;}</style></defs><title/><g id="Time"><circle class="cls-1" cx="32" cy="32" r="30"/><path class="cls-2" d="M4.56,37.61a28.07,28.07,0,0,1,1-14.94,2,2,0,0,0-3.76-1.34A31.9,31.9,0,0,0,.64,38.39a2,2,0,0,0,3.92-.78Z"/><path class="cls-2" d="M11.92,7.1,9.41,4.59A2,2,0,0,0,6,6c0,8.32,0,8.06,0,8.34A2,2,0,0,0,8,16h8a2,2,0,0,0,1.41-3.41L14.77,9.94C33.12-4.37,60,8.76,60,32A28,28,0,0,1,7.24,45.07,2,2,0,1,0,3.7,46.93,32,32,0,0,0,64,32C64,5.23,32.83-9.73,11.92,7.1Z"/><path class="cls-2" d="M20.59,43.41a2,2,0,0,0,2.82,0L31,35.85a4,4,0,0,0,3-7.29V12a2,2,0,0,0-4,0V28.56A3.92,3.92,0,0,0,28.15,33l-7.56,7.57A2,2,0,0,0,20.59,43.41Z"/></g></svg>
+            <p class="text-white text-base font-semibold">Memories</p>
+          </div>
+
+          <div class="saved flex items-center justify-start gap-3 my-auto">
+            <svg class="size-8" height="24" id="svg8" version="1.1" viewBox="0 0 24 24" fill="none" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs2"/><g id="g1445" style="display:inline" transform="translate(0,-290.64981)"><path d="M 6.80664,292.65039 C 5.26956,292.65039 4,293.91801 4,295.45508 v 16.19531 a 1.0001,1.0001 0 0 0 1.49609,0.86719 L 12,308.80078 l 6.50391,3.7168 A 1.0001,1.0001 0 0 0 20,311.65039 v -16.19531 c 0,-1.53707 -1.26956,-2.80469 -2.80664,-2.80469 z m 0,2 h 10.38672 c 0.46366,0 0.80664,0.34104 0.80664,0.80469 v 14.4707 l -5.50391,-3.14453 a 1.0001,1.0001 0 0 0 -0.99218,0 L 6,309.92578 v -14.4707 c 0,-0.46365 0.34298,-0.80469 0.80664,-0.80469 z" id="rect1441" style="color:#2842b8;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#2842b8;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#2842b8;solid-opacity:1;vector-effect:none;fill:#2842b8;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#2842b8;stop-opacity:1"/></g></svg>
+            <p class="text-white text-base font-semibold">Saved</p>
+          </div>
+
+          <div class="groups flex items-center justify-start gap-3 my-auto">
+            <svg class="size-8 bg-blue-600 p-[1.5px] rounded-[50%]" fill="white" enable-background="new 0 0 24 24" id="Layer_1" version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M9,9c0-1.7,1.3-3,3-3s3,1.3,3,3c0,1.7-1.3,3-3,3S9,10.7,9,9z M12,14c-4.6,0-6,3.3-6,3.3V19h12v-1.7C18,17.3,16.6,14,12,14z   "/></g><g><g><circle cx="18.5" cy="8.5" r="2.5"/></g><g><path d="M18.5,13c-1.2,0-2.1,0.3-2.8,0.8c2.3,1.1,3.2,3,3.2,3.2l0,0.1H23v-1.3C23,15.7,21.9,13,18.5,13z"/></g></g><g><g><circle cx="18.5" cy="8.5" r="2.5"/></g><g><path d="M18.5,13c-1.2,0-2.1,0.3-2.8,0.8c2.3,1.1,3.2,3,3.2,3.2l0,0.1H23v-1.3C23,15.7,21.9,13,18.5,13z"/></g></g><g><g><circle cx="5.5" cy="8.5" r="2.5"/></g><g><path d="M5.5,13c1.2,0,2.1,0.3,2.8,0.8c-2.3,1.1-3.2,3-3.2,3.2l0,0.1H1v-1.3C1,15.7,2.1,13,5.5,13z"/></g></g></svg>
+            <p class="text-white text-base font-semibold">Groups</p>
+          </div>
+
+          <div class="video flex items-center justify-start gap-3 my-auto">
+            <svg
+            class="size-8 p-[1px]"
+            enable-background="new 0 0 48 48"
+            height=""
+            id="Layer_1"
+            versiong="1.1"
+            viewBox="0 0 48 48"
+            width="2rem"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M46,37H2c-0.553,0-1-0.447-1-1V8c0-0.552,0.447-1,1-1h44c0.553,0,1,0.448,1,1v28  C47,36.553,46.553,37,46,37z M45,9H3v26h42V9z M21,16c0.214,0,0.4,0.082,0.563,0.196l7.771,4.872C29.72,21.205,30,21.566,30,22  c0,0.325-0.165,0.601-0.405,0.783l-7.974,4.981C21.449,27.904,21.238,28,21,28c-0.553,0-1-0.447-1-1V17C20,16.448,20.447,16,21,16z   M15,39h18c0.553,0,1,0.447,1,1s-0.447,1-1,1H15c-0.553,0-1-0.447-1-1S14.447,39,15,39z"
+              stroke="rgb(59 130 246)"
+              fill="white"
+              fill-rule="evenodd"
+            />
+          </svg>
+            <p class="text-white text-base font-semibold">Video</p>
+          </div>
+
+          <div class="marketplace flex items-center justify-start gap-3 my-auto">
+            <?xml version="1.0" ?><svg class="size-8" fill="rgb(59 130 246)" height="24" viewBox="0 0 24 24" width="" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M3.54217 3.21265C3.66907 2.78967 4.05839 2.5 4.5 2.5H19.5C19.9416 2.5 20.3309 2.78967 20.4578 3.21265L21.9578 8.21265C21.9858 8.30587 22 8.40268 22 8.5C22 10.7091 20.2091 12.5 18 12.5C16.8053 12.5 15.7329 11.9762 15 11.1458C14.2671 11.9762 13.1947 12.5 12 12.5C10.8053 12.5 9.73295 11.9762 9 11.1458C8.26706 11.9762 7.19469 12.5 6 12.5C3.79086 12.5 2 10.7091 2 8.5C2 8.40268 2.01421 8.30587 2.04217 8.21265L3.54217 3.21265ZM10 8.5C10 9.60457 10.8954 10.5 12 10.5C13.1046 10.5 14 9.60457 14 8.5C14 7.94772 14.4477 7.5 15 7.5C15.5523 7.5 16 7.94772 16 8.5C16 9.60457 16.8954 10.5 18 10.5C19.0601 10.5 19.9275 9.67524 19.9957 8.6324L18.756 4.5H5.24403L4.00431 8.63239C4.07246 9.67524 4.93992 10.5 6 10.5C7.10457 10.5 8 9.60457 8 8.5C8 7.94772 8.44772 7.5 9 7.5C9.55228 7.5 10 7.94772 10 8.5Z" fill="rgb(59 130 246)" fill-rule="evenodd"/><path clip-rule="evenodd" d="M5 19.5V11H3V20.5C3 21.0523 3.44772 21.5 4 21.5H20C20.5523 21.5 21 21.0523 21 20.5V11H19V19.5H5Z" stroke="rgb(59 130 246)" fill="rgb(59 130 246)" fill-rule="evenodd"/></svg>
+            <p class="text-white text-base font-semibold">Marketplace</p>
+          </div>
+
+          <div class="feeds flex items-center justify-start gap-3 my-auto">
+            <img class="size-9" src="img/caleeder.webp" alt="">
+            <p class="text-white text-base font-semibold">Feeds</p>
+          </div>
+
+          <div class="see_more flex items-center justify-start gap-3 my-auto">
+            <svg class="size-8 p-2 bg-zinc-700 rounded-[50%]" fill="rgb(209 213 219)" height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9  c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3  z"/></svg>
+            <p class="text-white text-base font-semibold">See More</p>
+          </div>
+
+          <div class="w-full h-[1px] bg-gray-500"></div>
+          
+          <!-- your-shortcuts -->
+          <div class="text-gray-300 font-semibold">Your shortcuts</div>
+
+          <div class=" flex items-center justify-start gap-3 my-auto">
+            <img class="size-10 rounded-lg" src="img/random1.jpeg" alt="">
+            <p class="text-white text-base font-semibold">Your shortcuts</p>
+          </div>
+
+          <div class=" flex items-center justify-start gap-3 my-auto">
+            <img class="size-10 rounded-lg" src="img/random1.jpeg" alt="">
+            <p class="text-white text-base font-semibold">Your shortcuts</p>
+          </div>
+
+          <div class=" flex items-center justify-start gap-3 my-auto">
+            <img class="size-10 rounded-lg" src="img/random1.jpeg" alt="">
+            <p class="text-white text-base font-semibold">Your shortcuts</p>
+          </div>
+
+          <p class="px-2 w-1/6 text-gray-400 text-sm font-semibold fixed bottom-0 left-0">
+            Privacy . Terms . Advertising . Ad Choices .Cookies . More . Meta  &copy 2024
+          </p>
+
+        </div>
+
+      <!-- newsfeed -->
+       <div class="relative top-16 sm:w-full xl:w-[35%] mx-auto flex flex-col gap-5">
+        <!-- stories -->
+        <ul
+        id="myCarousel"
+        class="stories mx-auto flex flex-rows-4 gap-2 py-3"
+      >
+        <li
+          class="story1 relative h-[14rem] w-[9rem] bg-zinc-800  flex flex-col rounded-xl"
+        >
+          <img
+            class="relative w-full h-full rounded-t-lg"
+            src="img/random.jpeg"
+            alt=""
+          />
+          <div class="relative center-0 flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="rgb(255,255,255)"
+              class="relative bottom-4 border-[3px] border-zinc-800 text-center bg-blue-500 size-9 rounded-[50%]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 4.5v15m7.5-7.5h-15"
+              />
+            </svg>
+          </div>
+          <p
+            class="text-center font-semibold text-white relative bottom-3 text-sm"
+          >
+            Create Story
+          </p>
+        </li>
+
+        <li
+          class="story2 relative h-[14rem] w-[9em] bg-zinc-800 rounded-xl"
+        >
+          <img
+            class="relative rounded-xl relative h-full w-full"
+            src="img/random2.jpeg"
+            alt=""
+          />
+          <div>
+            <img
+              class="absolute top-3 left-3 border-4 border-blue-500 size-12 rounded-[50%]"
+              src="img/random.jpeg"
+              alt=""
+            />
+          </div>
+          <div
+            class="absolute bottom-3 left-3 text-sm text-white font-semibold"
+          >
+            <p>Profile Name</p>
+          </div>
+        </li>
+
+        <li
+          class="story3 relative h-[14rem] w-[9rem] bg-zinc-800 rounded-xl"
+        >
+          <img
+            class="relative rounded-xl relative h-full w-full"
+            src="img/random2.jpeg"
+            alt=""
+          />
+          <div>
+            <img
+              class="absolute top-3 left-3 border-4 border-blue-500 size-12 rounded-[50%]"
+              src="img/random.jpeg"
+              alt=""
+            />
+          </div>
+          <div
+            class="absolute bottom-3 left-3 text-sm text-white font-semibold"
+          >
+            <p>Profile Name</p>
+          </div>
+        </li>
+
+        <li
+          class="story4 relative h-[14rem] w-[9rem] bg-zinc-800 rounded-xl"
+        >
+          <img
+            class="relative rounded-xl relative h-full w-full"
+            src="img/random2.jpeg"
+            alt=""
+          />
+          <div>
+            <img
+              class="absolute top-3 left-3 border-4 border-blue-500 size-12 rounded-[50%]"
+              src="img/random.jpeg"
+              alt=""
+            />
+          </div>
+          <div
+            class="absolute bottom-3 left-3 text-sm text-white font-semibold"
+          >
+            <p>Profile Name</p>
+          </div>
+        </li>
+
+        <!-- <li
+          class="story5 relative h-[14rem] w-[9rem] bg-zinc-800 rounded-xl"
+        >
+          <img
+            class="relative rounded-xl relative h-full w-full"
+            src="img/random2.jpeg"
+            alt=""
+          />
+          <div>
+            <img
+              class="absolute top-3 left-3 border-4 border-blue-500 size-12 rounded-[50%]"
+              src="img/random.jpeg"
+              alt=""
+            />
+          </div>
+          <div
+            class="absolute bottom-3 left-3 text-sm text-white font-semibold"
+          >
+            <p>Profile Name</p>
+          </div>
+        </li> -->
+
+        <!-- <li
+          class="story6 relative h-[14rem] w-[9rem] bg-zinc-800 rounded-xl"
+        >
+          <img
+            class="relative rounded-xl relative h-full w-full"
+            src="img/random2.jpeg"
+            alt=""
+          />
+          <div>
+            <img
+              class="absolute top-3 left-3 border-4 border-blue-500 size-12 rounded-[50%]"
+              src="img/random.jpeg"
+              alt=""
+            />
+          </div>
+          <div
+            class="absolute bottom-3 left-3 text-sm text-white font-semibold"
+          >
+            <p>Profile Name</p>
+          </div>
+        </li> -->
+        </ul>
+
+      <!-- add-post -->
+      <section class="add_post bg-zinc-800 flex flex-col gap-5 mx-5 rounded-lg p-4">
+        <div class="flex gap-5">
+          <img class="size-10 rounded-[50%]" src="img/random.jpeg" alt="">
+          <input class="bg-zinc-700 w-full text-base py-2 px-5 rounded-2xl" type="text" placeholder="What's on your mind, Profile?">
+        </div>
+
+        <div class="w-full h-[0.5px] bg-zinc-400"></div>
+
+        <div class="flex justify-between px-14">
+
+          <div class="live_video flex items-center gap-3">
+            <?xml version="1.0" ?><svg class="size-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="red"><path d="M16 7l4-4v14l-4-4v3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v3zm-8 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+            <p class="text-white text-sm font-semibold">Live Video</p>
+          </div>
+
+          <div class="photo/video flex gap-3 items-center">
+            <svg class="size-6" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#00ff80;}</style></defs><title/><g data-name="Layer 37" id="Layer_37"><path class="cls-1" d="M24,27H2a1,1,0,0,1-1-1V2A1,1,0,0,1,2,1H24a1,1,0,0,1,1,1V26A1,1,0,0,1,24,27ZM3,25H23V3H3Z"/><path class="cls-1" d="M30,31H8a1,1,0,0,1,0-2H29V7H28a1,1,0,0,1,0-2h2a1,1,0,0,1,1,1V30A1,1,0,0,1,30,31Z"/><path class="cls-1" d="M2,21.86a1,1,0,0,1-.7-.29,1,1,0,0,1,0-1.41L5.35,16a2.67,2.67,0,0,1,3.48-.29l3.59,2.6a.68.68,0,0,0,.88-.08L17,14.51a2.75,2.75,0,0,1,3.82,0l3.88,3.93a1,1,0,0,1-1.42,1.4l-3.88-3.93a.69.69,0,0,0-1,0l-3.71,3.75a2.68,2.68,0,0,1-3.48.3l-3.59-2.6a.67.67,0,0,0-.88.07L2.71,21.56A1,1,0,0,1,2,21.86Z"/><path class="cls-1" d="M13.85,12.86a4,4,0,1,1,4-4A4,4,0,0,1,13.85,12.86Zm0-6a2,2,0,1,0,2,2A2,2,0,0,0,13.85,6.86Z"/></g></svg>
+            <p class="text-white text-sm font-semibold">Photo/video</p>
+          </div>
+
+          <div class="feeling flex gap-3 items-center">
+            <svg class="size-6" fill="yellow" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="34-Happy and Smile" id="_34-Happy_and_Smile"><path d="M16,32A16,16,0,1,1,32,16,16,16,0,0,1,16,32ZM16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Z"/><path d="M15,13H13a2,2,0,0,0-4,0H7a4,4,0,0,1,8,0Z"/><path d="M25,13H23a2,2,0,0,0-4,0H17a4,4,0,0,1,8,0Z"/><path d="M16,25a8,8,0,0,1-8-8h2a6,6,0,0,0,12,0h2A8,8,0,0,1,16,25Z"/></g></svg>
+            <p class="text-white text-sm font-semibold">Feeling/activity</p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- post -->
+       <div class="post mx-5  h-fit bg-zinc-800 pt-5 rounded-lg flex flex-col gap-3">
+
+        <div class="flex justify-between items-center gap-4 px-4">
+         <div class="flex gap-4"> 
+          <img class="size-10 rounded-[50%]" src="img/random.jpeg" alt="">
+          
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1">
+              <p class="text-white font-semibold">Profile name</p>
+              <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="blue" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+              </svg>    
+              <p class="text-white font-semibold"> . <span class="text-blue-500"> Follow</span></p>          
+            </div>
+            <div class="flex items-center gap-2">
+              <p class="text-white text-sm">12h.</p>
+              <svg class="size-4" fill="gray" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M288 0C146.6 0 32 114.6 32 256s114.6 256 256 256s256-114.6 256-256S429.4 0 288 0zM473.9 283.2L453.4 273.1c-4.293-1.84-7.957-4.891-10.54-8.779l-18-27c-5.371-8.061-5.371-18.56 0-26.62l19.59-29.38c2.32-3.475 5.506-6.283 9.24-8.15c6.854-3.422 14.24-5.463 21.77-6.699C488.5 193.6 496 223.9 496 256c0 12.63-1.314 24.94-3.482 36.96L473.9 283.2zM207.5 64.25l9.383 8.934c4.746 4.52 10.14 8.307 16 11.24C236.4 86.21 240.6 86.6 244.4 85.49C251.4 83.38 256.1 76.93 256 69.66c.0078-6.363 4.828-11.69 11.16-12.33c2.529-.2695 5.051-.4805 7.58-.6504c3.555-.2266 7.033 1.09 9.549 3.609l24.4 24.4c.002 .002-.002 0 0 0c6.246 6.25 6.248 16.38-.002 22.63l-15.02 15.03c-3.121 3.123-3.121 8.186 0 11.31l4.689 4.689c3.123 3.123 3.123 8.186 0 11.31l-8 8C288.9 159.2 286.8 160 284.7 160h-9C273.6 160 271.6 160.9 270.1 162.3L260.2 172C257.7 174.4 257.1 178.2 258.6 181.3l15.59 31.19C274.8 213.6 275.1 214.8 275.1 216.1c.002 4.42-3.578 8.002-7.996 8.006H261.4c-1.932-.0137-3.791-.7246-5.24-2L246.9 214c-4.275-3.711-10.19-4.885-15.56-3.09l-31.17 10.39c-2.906 1.012-5.314 3.1-6.725 5.836c-3.037 5.891-.7246 13.13 5.164 16.16l11.08 5.541C219.1 253.5 229.5 256 240 256c10.52 0 22.59 27.29 32 32h66.76c8.486-.0039 16.63 3.363 22.63 9.359L375.1 311c5.729 5.727 8.941 13.5 8.93 21.6c.0098 12.39-4.93 24.27-13.72 33c-3.9 3.881-7.99 7.949-11.31 11.28c-2.982 2.961-5.131 6.654-6.23 10.71c-1.51 5.66-2.77 11.38-4.77 16.87l-14.11 41.63c-1.957 8.096-8.549 14.18-16.72 15.62c-1.379 .1953-2.732 .4629-4.119 .6309c-.5215 .0664-1.039 .1465-1.562 .209c-.8262 .0996-1.656 .1484-2.488 .1484c-11.6 .002-21-9.4-21-20.1v-13.07c1.689-12.62-7.631-36.25-22.63-51.25C259.4 371.4 255.1 363.2 256 354.8v-32c.0313-11.64-6.277-22.37-16.46-28c-14.37-7.951-34.81-19.06-48.81-26.11C179.3 262.8 168.6 255.5 159.1 246.9L158.3 246.2C151.5 240 145.4 233 140.2 225.4C132.9 214.7 116.3 190 104.6 172.7C103 170.4 102.2 167.8 101.1 165.4C123.1 120.1 160.9 83.88 207.5 64.25z"/></svg>
+              
+            </div>
+          </div>
+        </div>
+          <div class="flex items-center gap-4 object-right">
+            <svg class="three_dots size-5" fill="gray" enable-background="new 0 0 48 48" height="48px" id="Layer_3" version="1.1" viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><circle cx="5.5" cy="24" r="5.5"/><circle cx="42.499" cy="24" r="5.5"/><circle cx="24" cy="24" r="5.5"/></g></svg>
+
+            <svg class=" cross size-6" enable-background="new 0 0 32 32" height="32px" id="" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M17.459,16.014l8.239-8.194c0.395-0.391,0.395-1.024,0-1.414c-0.394-0.391-1.034-0.391-1.428,0  l-8.232,8.187L7.73,6.284c-0.394-0.395-1.034-0.395-1.428,0c-0.394,0.396-0.394,1.037,0,1.432l8.302,8.303l-8.332,8.286  c-0.394,0.391-0.394,1.024,0,1.414c0.394,0.391,1.034,0.391,1.428,0l8.325-8.279l8.275,8.276c0.394,0.395,1.034,0.395,1.428,0  c0.394-0.396,0.394-1.037,0-1.432L17.459,16.014z" fill="gray" id="Close"/><g/><g/><g/><g/><g/><g/></svg>
+          </div>
+        </div>
+
+        <p class="text-white px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam deleniti hic atque totam blanditiis voluptatibus.</p>
+
+        <img class="h-[20rem] object-cover" src="img/chef.png" alt="">
+
+        <div class="like_comment px-2 flex flex-col justify-between">
+
+          <div class="flex items-center justify-between">
+            <div class="likes flex items-center">
+            <svg class="reaction size-10 rounded-[50%] z-20 " style="enable-background:new 0 0 48 48;" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Icons"><g><circle cx="24" cy="24" r="12.244" style="fill:#F45368;"/><path d="M18.24736,24.60994L24,30.36258l5.74645-5.75264l0.03715-0.03096    c0.79261-0.79261,1.18892-1.83292,1.18892-2.87322c0-1.0403-0.39631-2.08061-1.18892-2.87941    c-1.59142-1.58523-4.16122-1.58523-5.75264,0L24,18.86349l-0.03715-0.03715c-1.58523-1.58523-4.16122-1.58523-5.74645,0    c-0.79261,0.79881-1.18892,1.83911-1.18892,2.87941c0,1.04031,0.39631,2.08061,1.18892,2.87322L18.24736,24.60994L24,30.36258    l5.74645-5.75264" style="fill:#FFFFFF;"/><path d="    M18.24736,24.60994L24,30.36258l5.74645-5.75264l0.03715-0.03096c0.79261-0.79261,1.18892-1.83292,1.18892-2.87322    c0-1.0403-0.39631-2.08061-1.18892-2.87941c-1.59142-1.58523-4.16122-1.58523-5.75264,0L24,18.86349l-0.03715-0.03715    c-1.58523-1.58523-4.16122-1.58523-5.74645,0c-0.79261,0.79881-1.18892,1.83911-1.18892,2.87941    c0,1.04031,0.39631,2.08061,1.18892,2.87322L18.24736,24.60994L24,30.36258l5.74645-5.75264" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><circle cx="24" cy="24" r="12.244" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/></g></g></svg>
+
+            <svg class="raction size-10 relative right-6 rounded-[50%] z-10" style="enable-background:new 0 0 48 48;" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Icons"><circle cx="24" cy="24" r="12.244" style="fill:#5791FF;"/><path d="M30.59952,22.99401c0-0.49188-0.26361-0.8501-0.75018-0.8501c0,0-2.80334,0-2.8053,0.0022   l-1.79816,0.00531c0.10706-0.14722,0.65112-2.16833,0.61096-2.55634s-0.48523-1.98456-0.48523-1.98456   c-0.71655-0.65656-1.33026-0.59955-1.84637,0.13379V19.885c0,0-1.84631,3.09064-1.87311,3.15082   c-0.02563,0.0578-0.81622,0.55127-0.88025,0.59119l-0.19592,0.01904c-0.22791-0.40942-0.6488-0.69775-1.1507-0.69775h-0.6925   c-0.73712,0-1.33466,0.59753-1.33466,1.33459v4.177c0,0.73706,0.59753,1.33459,1.33466,1.33459h0.6925   c0.64722,0,1.16156-0.46985,1.28351-1.08112h0.73993c0.19794,0.12817,0.39358,0.25989,0.59058,0.38965   c0.1654,0.10895,0.39662,0.16091,0.61786,0.16089c0.14502-0.00001,0.29004,0,0.43512,0c0.37311,0,0.74628,0,1.11945,0h2.99908   l-0.00024-0.00037l1.29236,0.00037c0.48663,0,0.94153-0.29706,0.94153-0.78369c0-0.49188-0.04523-0.966-0.5318-0.966h0.05688   c0.49188,0,0.85059-0.44299,0.85059-0.93488c0-0.48663,0.0542-0.87579-0.43768-0.87579h0.17072   c0.48663,0,0.74573-0.42499,0.74573-0.91687c0-0.48663,0.0636-0.8775-0.42303-0.8775h0.17004   C30.5325,23.90917,30.59952,23.48065,30.59952,22.99401z" style="fill:#FFFFFF;"/><circle cx="24" cy="24" r="12.244" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><path d="   M20.79997,28.7134h0.64869l0.59061,0.38961c0.08706,0.05337,0.32468,0.16092,0.61784,0.16092c0.14504,0,0.29008,0,0.43512,0   c0.37315,0,0.74629,0,1.11944,0h4.29122c0.48661,0,0.94153-0.29707,0.94153-0.78368c0-0.4919-0.04521-0.96604-0.53182-0.96604   h0.05691c0.4919,0,0.85057-0.44298,0.85057-0.93488c0-0.48661,0.0542-0.87575-0.4377-0.87575h0.17074   c0.48661,0,0.74575-0.425,0.74575-0.9169c0-0.48661,0.06355-0.8775-0.42306-0.8775h0.17007   c0.48661,0,0.55362-0.42853,0.55362-0.91514c0-0.4919-0.26357-0.85013-0.75018-0.85013l-4.60342,0.00751   c0,0,0.68137-1.89425,0.61094-2.5563c-0.04126-0.38788-0.48524-1.9846-0.48524-1.9846   c-0.30478-0.85098-1.78675-0.64011-1.84635,0.1338l0,1.13612c0,0.65709-0.17679,1.30041-0.51346,1.8647   c-0.37296,0.62512-0.86734,1.45921-1.14559,1.92908c-0.14191,0.23963-0.33419,0.44223-0.56546,0.5974l-0.54084,0.36287" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><path d="   M19.42525,29.79453h-0.6925c-0.7371,0-1.33464-0.59754-1.33464-1.33464v-4.17696c0-0.7371,0.59754-1.33464,1.33464-1.33464h0.6925   c0.7371,0,1.33464,0.59754,1.33464,1.33464v4.17696C20.75989,29.19699,20.16235,29.79453,19.42525,29.79453z" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/></g></svg>
+
+            <svg class="size-10 relative right-12" style="enable-background:new 0 0 48 48;" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Icons"><g><circle cx="24" cy="24" r="12.244" style="fill:#FFD872;"/><path d="M31.84885,24.02194c0,10.46181-15.69776,10.46181-15.69776,0H31.84885z" style="fill:#303030;"/><path d="M31.05482,27.69696c-4.13141-1.85107-10.01328-1.78401-14.02396,0.18109    C20.35767,33.62167,28.36138,32.93653,31.05482,27.69696z" style="fill:#F45368;"/><circle cx="24" cy="24" r="12.244" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><polyline points="    31.84887,21.62552 28.73835,19.79409 31.84887,17.99956   " style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><polyline points="    16.45646,21.62552 19.56698,19.79409 16.45646,17.99956   " style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><path d="    M31.84885,24.02194c0,10.46181-15.69776,10.46181-15.69776,0H31.84885z" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><path d="    M17.03086,27.87805c4.01068-1.9651,9.89256-2.03217,14.02396-0.18109" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/></g></g></svg>
+
+            <p class="relative right-12 text-gray-300">128k</p>
+          </div>
+
+          <div class="flex gap-4 pr-3">
+            <p class="text-gray-300">549 comments</p>
+            <p class="text-gray-300">2.1k shares</p>
+          </div>
+        </div>
+          
+          <div class="w-full h-[1px] bg-zinc-500"></div>
+        </div>
+
+        <div class="comments flex justify-between px-12 pb-3">
+          <div class="flex items-center justify-between gap-2">
+          <svg class="size-6" fill="gray" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="1" id="_1"><path d="M348.45,432.7H261.8a141.5,141.5,0,0,1-49.52-8.9l-67.5-25.07a15,15,0,0,1,10.45-28.12l67.49,25.07a111.79,111.79,0,0,0,39.08,7h86.65a14.21,14.21,0,1,0,0-28.42,15,15,0,0,1,0-30H368.9a14.21,14.21,0,1,0,0-28.42,15,15,0,0,1,0-30h20.44a14.21,14.21,0,0,0,10.05-24.26,14.08,14.08,0,0,0-10.05-4.16,15,15,0,0,1,0-30h20.45a14.21,14.21,0,0,0,10-24.26,14.09,14.09,0,0,0-10-4.17H268.15A15,15,0,0,1,255,176.74a100.2,100.2,0,0,0,9.2-29.33c3.39-21.87-.79-41.64-12.42-58.76a12.28,12.28,0,0,0-22.33,7c.49,51.38-23.25,88.72-68.65,108a15,15,0,1,1-11.72-27.61c18.72-8,32.36-19.75,40.55-35.08,6.68-12.51,10-27.65,9.83-45C199.31,77,211,61,229.18,55.34s36.81.78,47.45,16.46c24.71,36.36,20.25,74.1,13.48,97.21H409.79a44.21,44.21,0,0,1,19.59,83.84,44.27,44.27,0,0,1-20.44,58.42,44.27,44.27,0,0,1-20.45,58.43,44.23,44.23,0,0,1-40,63Z"/><path d="M155,410.49H69.13a15,15,0,0,1-15-15V189.86a15,15,0,0,1,15-15H155a15,15,0,0,1,15,15V395.49A15,15,0,0,1,155,410.49Zm-70.84-30H140V204.86H84.13Z"/></g></svg>
+          <p class="text-gray-400 font-semibold">Likes</p>
+        </div>
+
+        <div class="comments flex gap-2">
+          <svg class="size-6" enable-background="new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x33_0"/><g id="_x32_9"/><g id="_x32_8"/><g id="_x32_7"/><g id="_x32_6"/><g id="_x32_5"/><g id="_x32_4"/><g id="_x32_3"/><g id="_x32_2"/><g id="_x32_1"/><g id="_x32_0"/><g id="_x31_8"><path d="M25.784,21.017C26.581,19.467,27,17.741,27,16c0-6.065-4.935-11-11-11S5,9.935,5,16s4.935,11,11,11   c1.742,0,3.468-0.419,5.018-1.215l4.74,1.185C25.838,26.99,25.919,27,26,27c0.262,0,0.518-0.103,0.707-0.293   c0.248-0.249,0.349-0.609,0.263-0.95L25.784,21.017z M23.751,21.127l0.874,3.498l-3.498-0.875   c-0.247-0.061-0.509-0.026-0.731,0.098C19.055,24.602,17.534,25,16,25c-4.963,0-9-4.038-9-9s4.037-9,9-9s9,4.038,9,9   c0,1.534-0.398,3.054-1.151,4.395C23.724,20.618,23.688,20.88,23.751,21.127z" fill="gray"/></g><g id="_x31_7"/><g id="_x31_6"/><g id="_x31_5"/><g id="_x31_4"/><g id="_x31_3"/><g id="_x31_2"/><g id="_x31_1"/><g id="_x31_0"/><g id="_x39_"/><g id="_x38_"/><g id="_x37_"/><g id="_x36_"/><g id="_x35_"/><g id="_x34_"/><g id="_x33_"/><g id="_x32_"/><g id="_x31_"/><g id="Guides"/></svg>
+          <p class="text-gray-400 font-semibold">Comments</p>
+        </div>
+
+        <div class="shares flex gap-2">
+          <svg class="size-5" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:gray;}</style></defs><title/><g data-name="Layer 51" id="Layer_51"><path class="cls-1" d="M2,29A1.12,1.12,0,0,1,1.69,29,1,1,0,0,1,1,28V27A19,19,0,0,1,17,8.24V4a1,1,0,0,1,1.6-.8l12,9a1,1,0,0,1,0,1.6l-12,9A1,1,0,0,1,17,22V18.25A18.66,18.66,0,0,0,4.93,25.67L2.81,28.59A1,1,0,0,1,2,29ZM19,6V9.12a1,1,0,0,1-.89,1,17,17,0,0,0-15,14.6l.16-.21A20.68,20.68,0,0,1,17.9,16.11a1,1,0,0,1,.77.26,1,1,0,0,1,.33.74V20l9.33-7Z"/></g></svg>
+          <p class="text-gray-400 font-semibold">Shares</p>
+        </div>
+
+        </div>
+
+       </div>
+
+       <div class="post mx-5  h-fit bg-zinc-800 pt-5 rounded-lg flex flex-col gap-3">
+
+        <div class="flex justify-between items-center gap-4 px-4">
+         <div class="flex gap-4"> 
+          <img class="size-10 rounded-[50%]" src="img/random.jpeg" alt="">
+          
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1">
+              <p class="text-white font-semibold">Profile name</p>
+              <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="blue" viewBox="0 0 24 24" stroke-width="1.5" stroke="none">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+              </svg>    
+              <p class="text-white font-semibold"> . <span class="text-blue-500"> Follow</span></p>          
+            </div>
+            <div class="flex items-center gap-2">
+              <p class="text-white text-sm">12h.</p>
+              <svg class="size-4" fill="gray" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M288 0C146.6 0 32 114.6 32 256s114.6 256 256 256s256-114.6 256-256S429.4 0 288 0zM473.9 283.2L453.4 273.1c-4.293-1.84-7.957-4.891-10.54-8.779l-18-27c-5.371-8.061-5.371-18.56 0-26.62l19.59-29.38c2.32-3.475 5.506-6.283 9.24-8.15c6.854-3.422 14.24-5.463 21.77-6.699C488.5 193.6 496 223.9 496 256c0 12.63-1.314 24.94-3.482 36.96L473.9 283.2zM207.5 64.25l9.383 8.934c4.746 4.52 10.14 8.307 16 11.24C236.4 86.21 240.6 86.6 244.4 85.49C251.4 83.38 256.1 76.93 256 69.66c.0078-6.363 4.828-11.69 11.16-12.33c2.529-.2695 5.051-.4805 7.58-.6504c3.555-.2266 7.033 1.09 9.549 3.609l24.4 24.4c.002 .002-.002 0 0 0c6.246 6.25 6.248 16.38-.002 22.63l-15.02 15.03c-3.121 3.123-3.121 8.186 0 11.31l4.689 4.689c3.123 3.123 3.123 8.186 0 11.31l-8 8C288.9 159.2 286.8 160 284.7 160h-9C273.6 160 271.6 160.9 270.1 162.3L260.2 172C257.7 174.4 257.1 178.2 258.6 181.3l15.59 31.19C274.8 213.6 275.1 214.8 275.1 216.1c.002 4.42-3.578 8.002-7.996 8.006H261.4c-1.932-.0137-3.791-.7246-5.24-2L246.9 214c-4.275-3.711-10.19-4.885-15.56-3.09l-31.17 10.39c-2.906 1.012-5.314 3.1-6.725 5.836c-3.037 5.891-.7246 13.13 5.164 16.16l11.08 5.541C219.1 253.5 229.5 256 240 256c10.52 0 22.59 27.29 32 32h66.76c8.486-.0039 16.63 3.363 22.63 9.359L375.1 311c5.729 5.727 8.941 13.5 8.93 21.6c.0098 12.39-4.93 24.27-13.72 33c-3.9 3.881-7.99 7.949-11.31 11.28c-2.982 2.961-5.131 6.654-6.23 10.71c-1.51 5.66-2.77 11.38-4.77 16.87l-14.11 41.63c-1.957 8.096-8.549 14.18-16.72 15.62c-1.379 .1953-2.732 .4629-4.119 .6309c-.5215 .0664-1.039 .1465-1.562 .209c-.8262 .0996-1.656 .1484-2.488 .1484c-11.6 .002-21-9.4-21-20.1v-13.07c1.689-12.62-7.631-36.25-22.63-51.25C259.4 371.4 255.1 363.2 256 354.8v-32c.0313-11.64-6.277-22.37-16.46-28c-14.37-7.951-34.81-19.06-48.81-26.11C179.3 262.8 168.6 255.5 159.1 246.9L158.3 246.2C151.5 240 145.4 233 140.2 225.4C132.9 214.7 116.3 190 104.6 172.7C103 170.4 102.2 167.8 101.1 165.4C123.1 120.1 160.9 83.88 207.5 64.25z"/></svg>
+              
+            </div>
+          </div>
+        </div>
+          <div class="flex items-center gap-4 object-right">
+            <svg class="three_dots size-5" fill="gray" enable-background="new 0 0 48 48" height="48px" id="Layer_3" version="1.1" viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><circle cx="5.5" cy="24" r="5.5"/><circle cx="42.499" cy="24" r="5.5"/><circle cx="24" cy="24" r="5.5"/></g></svg>
+
+            <svg class=" cross size-6" enable-background="new 0 0 32 32" height="32px" id="" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M17.459,16.014l8.239-8.194c0.395-0.391,0.395-1.024,0-1.414c-0.394-0.391-1.034-0.391-1.428,0  l-8.232,8.187L7.73,6.284c-0.394-0.395-1.034-0.395-1.428,0c-0.394,0.396-0.394,1.037,0,1.432l8.302,8.303l-8.332,8.286  c-0.394,0.391-0.394,1.024,0,1.414c0.394,0.391,1.034,0.391,1.428,0l8.325-8.279l8.275,8.276c0.394,0.395,1.034,0.395,1.428,0  c0.394-0.396,0.394-1.037,0-1.432L17.459,16.014z" fill="gray" id="Close"/><g/><g/><g/><g/><g/><g/></svg>
+          </div>
+        </div>
+
+        <p class="text-white px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam deleniti hic atque totam blanditiis voluptatibus.</p>
+
+        <img class="h-[20rem] object-cover" src="img/chef.png" alt="">
+
+        <div class="like_comment px-2 flex flex-col justify-between">
+
+          <div class="flex items-center justify-between">
+            <div class="likes flex items-center">
+            <svg class="reaction size-10 rounded-[50%] z-20 " style="enable-background:new 0 0 48 48;" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Icons"><g><circle cx="24" cy="24" r="12.244" style="fill:#F45368;"/><path d="M18.24736,24.60994L24,30.36258l5.74645-5.75264l0.03715-0.03096    c0.79261-0.79261,1.18892-1.83292,1.18892-2.87322c0-1.0403-0.39631-2.08061-1.18892-2.87941    c-1.59142-1.58523-4.16122-1.58523-5.75264,0L24,18.86349l-0.03715-0.03715c-1.58523-1.58523-4.16122-1.58523-5.74645,0    c-0.79261,0.79881-1.18892,1.83911-1.18892,2.87941c0,1.04031,0.39631,2.08061,1.18892,2.87322L18.24736,24.60994L24,30.36258    l5.74645-5.75264" style="fill:#FFFFFF;"/><path d="    M18.24736,24.60994L24,30.36258l5.74645-5.75264l0.03715-0.03096c0.79261-0.79261,1.18892-1.83292,1.18892-2.87322    c0-1.0403-0.39631-2.08061-1.18892-2.87941c-1.59142-1.58523-4.16122-1.58523-5.75264,0L24,18.86349l-0.03715-0.03715    c-1.58523-1.58523-4.16122-1.58523-5.74645,0c-0.79261,0.79881-1.18892,1.83911-1.18892,2.87941    c0,1.04031,0.39631,2.08061,1.18892,2.87322L18.24736,24.60994L24,30.36258l5.74645-5.75264" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><circle cx="24" cy="24" r="12.244" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/></g></g></svg>
+
+            <svg class="raction size-10 relative right-6 rounded-[50%] z-10" style="enable-background:new 0 0 48 48;" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Icons"><circle cx="24" cy="24" r="12.244" style="fill:#5791FF;"/><path d="M30.59952,22.99401c0-0.49188-0.26361-0.8501-0.75018-0.8501c0,0-2.80334,0-2.8053,0.0022   l-1.79816,0.00531c0.10706-0.14722,0.65112-2.16833,0.61096-2.55634s-0.48523-1.98456-0.48523-1.98456   c-0.71655-0.65656-1.33026-0.59955-1.84637,0.13379V19.885c0,0-1.84631,3.09064-1.87311,3.15082   c-0.02563,0.0578-0.81622,0.55127-0.88025,0.59119l-0.19592,0.01904c-0.22791-0.40942-0.6488-0.69775-1.1507-0.69775h-0.6925   c-0.73712,0-1.33466,0.59753-1.33466,1.33459v4.177c0,0.73706,0.59753,1.33459,1.33466,1.33459h0.6925   c0.64722,0,1.16156-0.46985,1.28351-1.08112h0.73993c0.19794,0.12817,0.39358,0.25989,0.59058,0.38965   c0.1654,0.10895,0.39662,0.16091,0.61786,0.16089c0.14502-0.00001,0.29004,0,0.43512,0c0.37311,0,0.74628,0,1.11945,0h2.99908   l-0.00024-0.00037l1.29236,0.00037c0.48663,0,0.94153-0.29706,0.94153-0.78369c0-0.49188-0.04523-0.966-0.5318-0.966h0.05688   c0.49188,0,0.85059-0.44299,0.85059-0.93488c0-0.48663,0.0542-0.87579-0.43768-0.87579h0.17072   c0.48663,0,0.74573-0.42499,0.74573-0.91687c0-0.48663,0.0636-0.8775-0.42303-0.8775h0.17004   C30.5325,23.90917,30.59952,23.48065,30.59952,22.99401z" style="fill:#FFFFFF;"/><circle cx="24" cy="24" r="12.244" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><path d="   M20.79997,28.7134h0.64869l0.59061,0.38961c0.08706,0.05337,0.32468,0.16092,0.61784,0.16092c0.14504,0,0.29008,0,0.43512,0   c0.37315,0,0.74629,0,1.11944,0h4.29122c0.48661,0,0.94153-0.29707,0.94153-0.78368c0-0.4919-0.04521-0.96604-0.53182-0.96604   h0.05691c0.4919,0,0.85057-0.44298,0.85057-0.93488c0-0.48661,0.0542-0.87575-0.4377-0.87575h0.17074   c0.48661,0,0.74575-0.425,0.74575-0.9169c0-0.48661,0.06355-0.8775-0.42306-0.8775h0.17007   c0.48661,0,0.55362-0.42853,0.55362-0.91514c0-0.4919-0.26357-0.85013-0.75018-0.85013l-4.60342,0.00751   c0,0,0.68137-1.89425,0.61094-2.5563c-0.04126-0.38788-0.48524-1.9846-0.48524-1.9846   c-0.30478-0.85098-1.78675-0.64011-1.84635,0.1338l0,1.13612c0,0.65709-0.17679,1.30041-0.51346,1.8647   c-0.37296,0.62512-0.86734,1.45921-1.14559,1.92908c-0.14191,0.23963-0.33419,0.44223-0.56546,0.5974l-0.54084,0.36287" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><path d="   M19.42525,29.79453h-0.6925c-0.7371,0-1.33464-0.59754-1.33464-1.33464v-4.17696c0-0.7371,0.59754-1.33464,1.33464-1.33464h0.6925   c0.7371,0,1.33464,0.59754,1.33464,1.33464v4.17696C20.75989,29.19699,20.16235,29.79453,19.42525,29.79453z" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/></g></svg>
+
+            <svg class="size-10 relative right-12" style="enable-background:new 0 0 48 48;" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Icons"><g><circle cx="24" cy="24" r="12.244" style="fill:#FFD872;"/><path d="M31.84885,24.02194c0,10.46181-15.69776,10.46181-15.69776,0H31.84885z" style="fill:#303030;"/><path d="M31.05482,27.69696c-4.13141-1.85107-10.01328-1.78401-14.02396,0.18109    C20.35767,33.62167,28.36138,32.93653,31.05482,27.69696z" style="fill:#F45368;"/><circle cx="24" cy="24" r="12.244" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><polyline points="    31.84887,21.62552 28.73835,19.79409 31.84887,17.99956   " style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><polyline points="    16.45646,21.62552 19.56698,19.79409 16.45646,17.99956   " style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><path d="    M31.84885,24.02194c0,10.46181-15.69776,10.46181-15.69776,0H31.84885z" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><path d="    M17.03086,27.87805c4.01068-1.9651,9.89256-2.03217,14.02396-0.18109" style="fill:none;stroke:#303030;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/></g></g></svg>
+
+            <p class="relative right-12 text-gray-300">128k</p>
+          </div>
+
+          <div class="flex gap-4 pr-3">
+            <p class="text-gray-300">549 comments</p>
+            <p class="text-gray-300">2.1k shares</p>
+          </div>
+        </div>
+          
+          <div class="w-full h-[1px] bg-zinc-500"></div>
+        </div>
+
+        <div class="comments flex justify-between px-12 pb-2">
+          <div class="flex items-center justify-between gap-2">
+          <svg class="size-6" fill="gray" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="1" id="_1"><path d="M348.45,432.7H261.8a141.5,141.5,0,0,1-49.52-8.9l-67.5-25.07a15,15,0,0,1,10.45-28.12l67.49,25.07a111.79,111.79,0,0,0,39.08,7h86.65a14.21,14.21,0,1,0,0-28.42,15,15,0,0,1,0-30H368.9a14.21,14.21,0,1,0,0-28.42,15,15,0,0,1,0-30h20.44a14.21,14.21,0,0,0,10.05-24.26,14.08,14.08,0,0,0-10.05-4.16,15,15,0,0,1,0-30h20.45a14.21,14.21,0,0,0,10-24.26,14.09,14.09,0,0,0-10-4.17H268.15A15,15,0,0,1,255,176.74a100.2,100.2,0,0,0,9.2-29.33c3.39-21.87-.79-41.64-12.42-58.76a12.28,12.28,0,0,0-22.33,7c.49,51.38-23.25,88.72-68.65,108a15,15,0,1,1-11.72-27.61c18.72-8,32.36-19.75,40.55-35.08,6.68-12.51,10-27.65,9.83-45C199.31,77,211,61,229.18,55.34s36.81.78,47.45,16.46c24.71,36.36,20.25,74.1,13.48,97.21H409.79a44.21,44.21,0,0,1,19.59,83.84,44.27,44.27,0,0,1-20.44,58.42,44.27,44.27,0,0,1-20.45,58.43,44.23,44.23,0,0,1-40,63Z"/><path d="M155,410.49H69.13a15,15,0,0,1-15-15V189.86a15,15,0,0,1,15-15H155a15,15,0,0,1,15,15V395.49A15,15,0,0,1,155,410.49Zm-70.84-30H140V204.86H84.13Z"/></g></svg>
+          <p class="text-gray-400 font-semibold">Likes</p>
+        </div>
+
+        <div class="comments flex gap-2">
+          <svg class="size-6" enable-background="new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x33_0"/><g id="_x32_9"/><g id="_x32_8"/><g id="_x32_7"/><g id="_x32_6"/><g id="_x32_5"/><g id="_x32_4"/><g id="_x32_3"/><g id="_x32_2"/><g id="_x32_1"/><g id="_x32_0"/><g id="_x31_8"><path d="M25.784,21.017C26.581,19.467,27,17.741,27,16c0-6.065-4.935-11-11-11S5,9.935,5,16s4.935,11,11,11   c1.742,0,3.468-0.419,5.018-1.215l4.74,1.185C25.838,26.99,25.919,27,26,27c0.262,0,0.518-0.103,0.707-0.293   c0.248-0.249,0.349-0.609,0.263-0.95L25.784,21.017z M23.751,21.127l0.874,3.498l-3.498-0.875   c-0.247-0.061-0.509-0.026-0.731,0.098C19.055,24.602,17.534,25,16,25c-4.963,0-9-4.038-9-9s4.037-9,9-9s9,4.038,9,9   c0,1.534-0.398,3.054-1.151,4.395C23.724,20.618,23.688,20.88,23.751,21.127z" fill="gray"/></g><g id="_x31_7"/><g id="_x31_6"/><g id="_x31_5"/><g id="_x31_4"/><g id="_x31_3"/><g id="_x31_2"/><g id="_x31_1"/><g id="_x31_0"/><g id="_x39_"/><g id="_x38_"/><g id="_x37_"/><g id="_x36_"/><g id="_x35_"/><g id="_x34_"/><g id="_x33_"/><g id="_x32_"/><g id="_x31_"/><g id="Guides"/></svg>
+          <p class="text-gray-400 font-semibold">Comments</p>
+        </div>
+
+        <div class="shares flex gap-2">
+          <svg class="size-5" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:gray;}</style></defs><title/><g data-name="Layer 51" id="Layer_51"><path class="cls-1" d="M2,29A1.12,1.12,0,0,1,1.69,29,1,1,0,0,1,1,28V27A19,19,0,0,1,17,8.24V4a1,1,0,0,1,1.6-.8l12,9a1,1,0,0,1,0,1.6l-12,9A1,1,0,0,1,17,22V18.25A18.66,18.66,0,0,0,4.93,25.67L2.81,28.59A1,1,0,0,1,2,29ZM19,6V9.12a1,1,0,0,1-.89,1,17,17,0,0,0-15,14.6l.16-.21A20.68,20.68,0,0,1,17.9,16.11a1,1,0,0,1,.77.26,1,1,0,0,1,.33.74V20l9.33-7Z"/></g></svg>
+          <p class="text-gray-400 font-semibold">Shares</p>
+        </div>
+
+        </div>
+
+       </div>
+
+
+
+        <!-- carousel-control -->
+        <!-- <a class="left carousel-control" href="#myCarousel" role="button">
+          <span
+            class="glyphicon glyphicon-chevron-left"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button">
+          <span
+            class="glyphicon glyphicon-chevron-right"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Next</span>
+        </a> -->
+        </div>
+
+        <!-- right-bar -->
+        <div class="right fixed right-0 top-16 overflow-x-scroll sm:hidden xl:flex w-1/5 p-5 flex-col gap-5">
+          <div class=" flex flex-col gap-3">
+            <p class="text-gray-300 text-lg font-semibold">Birthdays</p>
+            <div class="flex gap-5">
+              <svg class="size-8 " height="" version="1.1" width="" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -1028.4)"><path d="m1 1037.4v3 2 7c0 1.1 0.8954 2 2 2h9 9c1.105 0 2-0.9 2-2v-7-2-3h-22z" fill="#f39c12"/><path d="m1 1036.4v3 2 7c0 1.1 0.8954 2 2 2h9 9c1.105 0 2-0.9 2-2v-7-2-3h-22z" fill="#f1c40f"/><path d="m2 1034.4c-1.1046 0-2 0.9-2 2v2h24v-2c0-1.1-0.895-2-2-2h-2-7-2-7-2z" fill="#f1c40f"/><rect fill="#e74c3c" height="18" width="6" x="9" y="1033.4"/><path d="m7.8848 1029.4c-0.9986-0.1-1.9733 0.4-2.5079 1.2-0.7776 1.2-0.3129 2.7 1.034 3.4 0.4331 0.3 0.897 0.4 1.3639 0.4h0.231 3.3002 1.386 3.299 0.231c0.467 0 0.942-0.1 1.375-0.4 1.347-0.7 1.801-2.2 1.023-3.4-0.777-1.2-2.492-1.6-3.839-0.9-0.433 0.2-0.773 0.5-1.011 0.9h-0.022c-0.032 0.1-0.06 0.1-0.088 0.2l-1.661 2.5-1.661-2.5c-0.028-0.1-0.056-0.1-0.088-0.2h-0.022c-0.2386-0.4-0.5681-0.7-1.0013-0.9-0.4209-0.2-0.888-0.3-1.3419-0.3zm-0.165 1.2c0.2705 0 0.5504 0.1 0.803 0.2 0.0847 0 0.1609 0.1 0.2309 0.1 0.0493 0.1 0.0902 0.1 0.132 0.2h0.033c0.0225 0 0.046 0.1 0.066 0.1h0.033 0.011c0.016 0.1 0.041 0.1 0.055 0.1l1.1663 1.8h-2.3322-0.132-0.055-0.11-0.055c-0.064 0-0.1241 0-0.187-0.1-0.0894 0-0.1792 0-0.264-0.1-0.1683 0-0.3187-0.2-0.429-0.3-0.3307-0.4-0.3796-0.9-0.088-1.4 0.243-0.3 0.6711-0.6 1.122-0.6zm8.5682 0c0.451 0 0.879 0.3 1.122 0.6 0.292 0.5 0.232 1-0.099 1.4-0.11 0.1-0.249 0.3-0.418 0.3-0.084 0.1-0.174 0.1-0.264 0.1-0.062 0.1-0.134 0.1-0.198 0.1h-0.055-0.11-0.055-0.132-2.331l1.165-1.8c0.014 0 0.039 0 0.055-0.1h0.011c0.003 0-0.002 0 0 0h0.033c0.02 0 0.044-0.1 0.066-0.1h0.033c0.042-0.1 0.094-0.1 0.143-0.2 0.071 0 0.147-0.1 0.231-0.1 0.253-0.1 0.533-0.2 0.803-0.2z" fill="#c0392b"/><rect fill="#f39c12" height="1" width="22" x="1" y="1038.4"/><rect fill="#c0392b" height="1" width="6" x="9" y="1038.4"/><rect fill="#c0392b" height="1" width="6" x="9" y="1050.4"/></g></svg>
+              <p class="text-white"><span class=" font-semibold">John Oliver</span> and <span class=" font-semibold">Charles beige</span>  have birthdays today. Wish them.</p>
+            </div>
+
+            <div class="w-full h-[1px] bg-gray-500"></div>
+
+            <div class="flex justify-between">
+              <p class="text-gray-300 text-lg font-semibold">Contacts</p>
+
+              <div class="flex items-center gap-5">
+              <svg class="feather feather-search p-[1px]" fill="none" height="24" stroke="rgb(156 163 175)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/></svg>
+
+              <svg class="size-4" fill="rgb(156 163 175)" enable-background="new 0 0 48 48" height="" id="Layer_3" version="1.1" viewBox="0 0 48 48" width="" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><circle cx="5.5" cy="24" r="5.5"/><circle cx="42.499" cy="24" r="5.5"/><circle cx="24" cy="24" r="5.5"/></g></svg>
+            </div>
+            </div>
+
+            <ul class="flex flex-col gap-4">
+            <li class="relative flex items-center gap-5">
+              <img class=" size-9 rounded-[50%]" src="img/random.jpeg" alt="">
+              <div class="absolute top-7 left-7 w-2 h-2 rounded-[50%] bg-green-500"></div>
+              <p class="text-white font-semibold">Sanjay Khadgi</p>
+            </li>
+            <li class="relative flex items-center gap-5">
+              <img class=" size-9 rounded-[50%]" src="img/random.jpeg" alt="">
+              <div class="absolute top-7 left-7 w-2 h-2 rounded-[50%] bg-green-500"></div>
+              <p class="text-white font-semibold">Oliver Jake</p>
+            </li>
+            <li class="relative flex items-center gap-5">
+              <img class=" size-9 rounded-[50%]" src="img/random.jpeg" alt="">
+              <div class="absolute top-8 left-8 w-2 h-2 rounded-[50%] bg-green-500"></div>
+              <p class="text-white font-semibold">Jack Connor</p>
+            </li>
+            <li class="relative flex items-center gap-5">
+              <img class=" size-9 rounded-[50%]" src="img/random.jpeg" alt="">
+              <div class="absolute top-8 left-8 w-2 h-2 rounded-[50%] bg-green-500"></div>
+              <p class="text-white font-semibold">Harry Callum</p>
+            </li>
+            <li class="relative flex items-center gap-5">
+              <img class=" size-9 rounded-[50%]" src="img/random.jpeg" alt="">
+              <div class="absolute top-8 left-8 w-2 h-2 rounded-[50%] bg-green-500"></div>
+              <p class="text-white font-semibold">Charlie Kyle</p>
+            </li>
+            <li class="relative flex items-center gap-5">
+              <img class=" size-9 rounded-[50%]" src="img/random.jpeg" alt="">
+              <div class="absolute top-8 left-8 w-2 h-2 rounded-[50%] bg-green-500"></div>
+              <p class="text-white font-semibold">Jacob Richard</p>
+            </li>
+            <li class="relative flex items-center gap-5">
+              <img class=" size-9 rounded-[50%]" src="img/random.jpeg" alt="">
+              <div class="absolute top-8 left-8 w-2 h-2 rounded-[50%] bg-green-500"></div>
+              <p class="text-white font-semibold">Jack Connor</p>
+            </li>
+            <li class="relative flex items-center gap-5">
+              <img class=" size-9 rounded-[50%]" src="img/random.jpeg" alt="">
+              <div class="absolute top-8 left-8 w-2 h-2 rounded-[50%] bg-green-500"></div>
+              <p class="text-white font-semibold">Charlie Kyle</p>
+            </li>
+            <li class="relative flex items-center gap-5">
+              <img class=" size-9 rounded-[50%]" src="img/random.jpeg" alt="">
+              <div class="absolute top-8 left-8 w-2 h-2 rounded-[50%] bg-green-500"></div>
+              <p class="text-white font-semibold">Harry Callum</p>
+            </li>
+            <li class="relative flex items-center gap-5">
+              <img class=" size-9 rounded-[50%]" src="img/random.jpeg" alt="">
+              <div class="absolute top-8 left-8 w-2 h-2 rounded-[50%] bg-green-500"></div>
+              <p class="text-white font-semibold">Sanjay Khadgi</p>
+            </li>
+            <li class="relative flex items-center gap-5">
+              <img class=" size-9 rounded-[50%]" src="img/random.jpeg" alt="">
+              <div class="absolute top-8 left-8 w-2 h-2 rounded-[50%] bg-green-500"></div>
+              <p class="text-white font-semibold">Oliver Jake</p>
+            </li>
+
+            <div class="w-full h-[1px] bg-gray-500"></div>
+
+            <p class="text-gray-300 text-lg font-semibold">Group conversations</p>
+
+            <li class="relative flex items-center gap-5">
+              <img class=" size-9 rounded-[50%]" src="img/random.jpeg" alt="">
+              <div class="absolute top-8 left-8 w-2 h-2 rounded-[50%] bg-green-500"></div>
+              <p class="text-white font-semibold">Facebook groups</p>
+            </li>
+            <li class="relative flex items-center gap-5">
+              <img class=" size-9 rounded-[50%]" src="img/random.jpeg" alt="">
+              <div class="absolute top-8 left-8 w-2 h-2 rounded-[50%] bg-green-500"></div>
+              <p class="text-white font-semibold">Facebook groups</p>
+            </li>
+            <li class="relative flex items-center gap-5">
+              <!-- <img class=" size-9 rounded-[50%]" src="img/random.jpeg" alt="">
+              <div class="absolute top-8 left-8 w-2 h-2 rounded-[50%] bg-green-500"></div> -->
+              <div class="size-10 bg-zinc-800 flex items-center justify-center rounded-[50%]"><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="rgb(241 245 249)"
+                class="size-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg></div>
+              <p class="text-white font-semibold">Create new group</p>
+            </li>
+          
+          </ul>
+
+        <div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- <script>
+      $(document).ready(function () {
+        //Activate carousel
+        $("myCarousel").carousel();
+
+        //enable carousel
+        $(".story1").click(function () {
+          $("#myCarousel").carousel(0);
+        });
+        $(".story2").click(function () {
+          $("#myCarousel").carousel(1);
+        });
+        $(".story3").click(function () {
+          $("#myCarousel").carousel(2);
+        });
+        $(".story4").click(function () {
+          $("#myCarousel").carousel(3);
+        });
+        $(".story5").click(function () {
+          $("#myCarousel").carousel(4);
+        });
+
+        // Enable Carousel Controls
+        $(".left").click(function () {
+          $("#myCarousel").carousel("prev");
+        });
+        $(".right").click(function () {
+          $("#myCarousel").carousel("next");
+        });
+      });
+    </script> -->
+  </body>
+</html>

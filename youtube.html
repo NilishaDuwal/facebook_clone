@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <section class="flex flex-col">
+    <!-- header -->
+    <section class="header flex sm:px-5 sm:py-5 justify-between transition-all ease-in-out duration-300">
+      <div class="logo flex items-center sm:gap-4 lg:gap-7 transition-all ease-in-out duration-300">
+        <button
+          id="hamburger_menu"
+          class="my-auto sm:text-base md:text-2xl lg:text-3xl flex text-gray-600 transition-all ease-in-out duration-300"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        
+        </button>
+        
+        <a href="#"
+          ><img class="sm:w-[5rem] sm:py-2 md:w-[6rem] lg:w-[6.5rem] transition-all ease-in-out duration-300" src="/img/youtubelogo.png" alt=""
+        /></a>
+      </div>
+
+<!-- search -->
+      <div class="flex gap-4">
+        <div
+          class="sm:w-[21rem] md:w-[23rem] lg:w-[35rem] lg:h-11 border-[2px] border-gray-200 rounded-3xl flex justify-between transition-all ease-in-out duration-300"
+        >
+          <input
+            class="w-full px-5 sm:text-sm lg:text-lg rounded-l-3xl transition-all ease-in-out duration-300"
+            placeholder="Search"
+          />
+          
+          <button
+            class="px-4 border-l border-gray-200 bg-gray-100 rounded-r-3xl flex items-center justify-center hover:bg-gray-300"
+          >
+            <svg
+              class="my-auto sm:w-5 sm:h-5 lg:w-8 lg:h-6 transition-all ease-in-out duration-300"
+              id="Layer_1"
+              style="enable-background: new 0 0 512 512"
+              version="1.1"
+              viewBox="0 0 512 512"
+              width="512px"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M448.3,424.7L335,311.3c20.8-26,33.3-59.1,33.3-95.1c0-84.1-68.1-152.2-152-152.2c-84,0-152,68.2-152,152.2  s68.1,152.2,152,152.2c36.2,0,69.4-12.7,95.5-33.8L425,448L448.3,424.7z M120.1,312.6c-25.7-25.7-39.8-59.9-39.8-96.3  s14.2-70.6,39.8-96.3S180,80,216.3,80c36.3,0,70.5,14.2,96.2,39.9s39.8,59.9,39.8,96.3s-14.2,70.6-39.8,96.3  c-25.7,25.7-59.9,39.9-96.2,39.9C180,352.5,145.8,338.3,120.1,312.6z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <a class="microphone flex sm:w-9 md:w-10 lg:w-10 transition-all ease-in-out duration-300" href="">
+          <svg
+            class="my-auto p-2 bg-gray-200 rounded-full"
+            viewBox="0 0 256 256"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect fill="none" height="" width="" />
+            <path
+              d="M128,176a48,48,0,0,0,48-48V64a48,48,0,0,0-96,0v64A48,48,0,0,0,128,176Z"
+            />
+            <path
+              d="M200.4,128.1a8,8,0,0,0-8.8,7,64,64,0,0,1-127.2,0,8,8,0,0,0-8.8-7,7.9,7.9,0,0,0-7.1,8.8A79.7,79.7,0,0,0,120,207.3V232a8,8,0,0,0,16,0V207.3a79.7,79.7,0,0,0,71.5-70.4A7.9,7.9,0,0,0,200.4,128.1Z"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <!-- notification -->
+      <div class="notifications md:pr-12 flex items-center jusfity-center md:gap-3 lg:gap-5 transition-all ease-in-out duration-300">
+        <a class="uploads my-auto sm:w-[1.5rem] md:w-[2rem] transition-all ease-in-out duration-300" href=""> 
+          <svg class="sm:w-6 md:w-8 lg:w-7 transition-all ease-in-out duration-300" fill="none" height="" viewBox="0 0 24 24" width="" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M2.5 8C2.5 6.61929 3.61929 5.5 5 5.5H14.5C15.8807 5.5 17 6.61929 17 8V9.23062L20.7969 7.54309C20.9516 7.47435 21.1305 7.48853 21.2725 7.58075C21.4144 7.67298 21.5 7.83075 21.5 8V16C21.5 16.1693 21.4144 16.327 21.2725 16.4192C21.1305 16.5115 20.9516 16.5256 20.7969 16.4569L17 14.7694V16C17 17.3807 15.8807 18.5 14.5 18.5H5C3.61929 18.5 2.5 17.3807 2.5 16V8ZM5 6.5C4.17157 6.5 3.5 7.17157 3.5 8V16C3.5 16.8284 4.17157 17.5 5 17.5H14.5C15.3284 17.5 16 16.8284 16 16V14.7694C16 14.0457 16.7449 13.5617 17.4061 13.8556L20.5 15.2306V8.76938L17.4061 10.1444C16.7449 10.4383 16 9.95428 16 9.23062V8C16 7.17157 15.3284 6.5 14.5 6.5H5Z" fill="black" fill-rule="evenodd"/><path clip-rule="evenodd" d="M9.5 15V9H10.5V15H9.5Z" fill="black" fill-rule="evenodd"/><path clip-rule="evenodd" d="M13 12.5H7V11.5H13V12.5Z" fill="black" fill-rule="evenodd"/></svg>
+        </a>
+        <a class="notify my-auto sm:w-[1.5rem] md:w-[1.8rem] transition-all ease-in-out duration-300" href="">
+            <svg class="sm:w-4 md:w-6 lg: transition-all ease-in-out duration-300" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title/><g id="bell"><path d="M29.78,24.37l-3.65-4.48L26,12a1,1,0,0,0,0-.16C24.85,5.58,21.21,2,16,2,10.5,2,6.08,6,5,11.82A1,1,0,0,0,5,12l-.13,8L2.14,24.48a1,1,0,0,0,0,1A1,1,0,0,0,3,26h9a4,4,0,0,0,8,0h9a1,1,0,0,0,.9-.57A1,1,0,0,0,29.78,24.37ZM16,28a2,2,0,0,1-2-2h4A2,2,0,0,1,16,28ZM4.77,24l2-3.24a1,1,0,0,0,.14-.5L7,12.1C7.91,7.25,11.52,4,16,4c5.63,0,7.43,5,8,8.1l.14,8.16a1,1,0,0,0,.22.62L26.9,24Z"/></g></svg>
+        </a>
+        <a href="">
+        <img class="email sm:w-6 sm:h-6 md:w-8 md:h-8 rounded-full transition-all ease-in-out duration-300" src="img/random.jpeg" alt=""></a>
+      </div>
+
+    </section>
+
+    <section class="flex gap-4">
+    <!-- sidebar -->
+     <section class="sidebar pl-1 pr-5 flex flex-col gap-5">
+      <div class="flex flex-col items-center">
+        <a href=""><img class="sm:w-4 lg:w-5 transition-all ease-in-out duration-300" src="/img/home.png" alt=""></a>
+        <a class="sm:text-[10px] lg:text-xs transition-all ease-in-out duration-300" href="#">Home</a>
+      </div>
+      <div class="flex flex-col items-center">
+        <a href=""><img class="sm:w-5 lg:w-6 transition-all ease-in-out duration-300" src="/img/shorts.png" alt=""></a>
+        <a class="sm:text-[10px] lg:text-xs transition-all ease-in-out duration-300" href="">Shorts</a>
+      </div>
+      <div class="flex flex-col items-center">
+        <a href=""><img class="sm:w-4 lg:w-5 transition-all ease-in-out duration-300" src="/img/subscription.png" alt=""></a>
+        <a class="sm:text-[10px] lg:text-xs transition-all ease-in-out duration-300" href="">Subscription</a>
+      </div>
+      <div class="flex flex-col items-center">
+        <a href=""><img class="sm:w-4 lg:w-5 transition-all ease-in-out duration-300" src="/img/you.png" alt=""></a>
+        <a class="sm:text-[10px] lg:text-xs transition-all ease-in-out duration-300" href="">You</a>
+      </div>
+      <div class="flex flex-col items-center">
+        <a href=""><img class="sm:w-4 lg:w-5 transition-all ease-in-out duration-300" src="/img/download.png" alt=""></a>
+        <a class="sm:text-[10px] lg:text-xs transition-all ease-in-out duration-300" href="">Downloads</a>
+      </div>
+     </section>
+
+     <!-- homepage -->
+     <section class="homepage flex flex-col gap-5">
+      <div class="flex sm:gap-1 md:gap-2 lg:gap-3 transition-all ease-in-out duration-300">
+        <a class="p-1 px-2 sm:text-xs lg:text-base rounded-lg text-white  bg-black transition-all ease-in-out duration-300" href="">All</a>
+        <a class="p-1 px-2 sm:text-xs lg:text-base rounded-lg bg-gray-200 transition-all ease-in-out duration-300" href="">Music</a>
+        <a class="p-1 px-2 sm:text-xs lg:text-base rounded-lg bg-gray-200 transition-all ease-in-out duration-300" href="">Mixed</a>
+        <a class="p-1 px-2 sm:text-xs lg:text-base rounded-lg bg-gray-200 transition-all ease-in-out duration-300" href="">Films</a>
+        <a class="p-1 px-2 sm:text-xs lg:text-base rounded-lg bg-gray-200 transition-all ease-in-out duration-300" href="">Comedy</a>
+        <a class="p-1 px-2 sm:text-xs lg:text-base rounded-lg bg-gray-200 transition-all ease-in-out duration-300" href="">Horror</a>
+        <a class="p-1 px-2 sm:text-xs lg:text-base rounded-lg bg-gray-200 transition-all ease-in-out duration-300" href="">Thriller</a>
+        <a class="p-1 px-2 sm:text-xs lg:text-base rounded-lg bg-gray-200 transition-all ease-in-out duration-300" href="">Game shows</a>
+        <a class="p-1 px-2 sm:text-xs sm:hidden md:block lg:text-base rounded-lg bg-gray-200 transition-all ease-in-out duration-300" href="">Action</a>
+        <a class="p-1 px-2 sm:text-xs sm:hidden md:block lg:text-base rounded-lg bg-gray-200 transition-all ease-in-out duration-300" href="">Sci-fi</a>
+        <a class="p-1 px-2 sm:text-xs sm:hidden lg:block lg:text-base rounded-lg bg-gray-200 transition-all ease-in-out duration-300" href="">Rom-com</a>
+        <svg class="w-6 p-2 hover:bg-gray-200 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+      </div>
+
+      <!-- contents -->
+      <div class="content grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5">
+
+        <div class="thumbnail1 w-full flex flex-col gap-1">
+          <a class="w-[]" href=""><img class="rounded-lg w-full object-cover " src="img/thumbnail1.jpeg" alt=""></a>
+          <div class="decription flex sm:justify-start justify-between sm:px-1 sm:gap-1 md:gap-3">
+            <a href="">
+            <img class="w-9 h-9 rounded-full" src="img/random.jpeg" alt=""></a>
+            <div class="">
+              <p class="font-semibold sm:text-sm lg:text-base transition-all ease-in-out duration-300">The most Attractive Thumbnail.</p>
+              <div class="account flex gap-2">
+              <p class="sm:text-sm font-light text-gray-500 transition-all ease-in-out duration-300">Thumbnail Maker</p> 
+              <svg class="my-auto flex w-3" id="Icons" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#5f5d5d;}</style></defs><path class="cls-1" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm5.707,8.707-7,7a1,1,0,0,1-1.414,0l-3-3a1,1,0,0,1,1.414-1.414L10,14.586l6.293-6.293a1,1,0,0,1,1.414,1.414Z"/></svg>
+            </div>
+            <p class="sm:text-sm font-light text-gray-500 transition-all ease-in-out duration-300">1.5M views  | |  1 month ago</p>
+            </div>
+            <a href="">
+            <svg class="w-4 pb-8 flex items-start" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#000000;}</style></defs><title/><g data-name="Layer 60" id="Layer_60"><circle class="cls-1" cx="16" cy="16" r="1"/><path class="cls-1" d="M16,18a2,2,0,1,1,2-2A2,2,0,0,1,16,18Zm0-2Z"/><circle class="cls-1" cx="16" cy="5" r="1"/><path class="cls-1" d="M16,7a2,2,0,1,1,2-2A2,2,0,0,1,16,7Zm0-2Z"/><circle class="cls-1" cx="16" cy="27" r="1"/><path class="cls-1" d="M16,29a2,2,0,1,1,2-2A2,2,0,0,1,16,29Zm0-2Z"/></g></svg></a>
+          </div>
+          
+        </div>
+
+        <div class="thumbnail2 w-full flex flex-col gap-1">
+          <a class=" sm:h-[11rem] rounded-lg"><img class="rounded-lg w-full h-full" src="img/thumbnail2.jpeg" alt=""></a>
+          <div class="decription flex justify-between sm:px-1 sm:gap-1 md:gap-3">
+            <a href=""><img class="w-9 h-9 rounded-full" src="img/random.jpeg" alt=""></a>
+            <div>
+              <p class="font-semibold sm:text-sm lg:text-base">The most Attractive Thumbnail.</p>
+              <div class="account flex gap-2">
+              <p class="sm:text-sm font-light text-gray-500 transition-all ease-in-out duration-300">Thumbnail Maker</p> 
+              <svg class="my-auto flex w-3" id="Icons" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#5f5d5d;}</style></defs><path class="cls-1" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm5.707,8.707-7,7a1,1,0,0,1-1.414,0l-3-3a1,1,0,0,1,1.414-1.414L10,14.586l6.293-6.293a1,1,0,0,1,1.414,1.414Z"/></svg>
+            </div>
+            <p class="sm:text-xs font-light text-gray-500 transition-all ease-in-out duration-300">1.5M views 1 month ago</p>
+            </div>
+            <a href=""><svg class="w-6 pb-8 flex items-start" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#000000;}</style></defs><title/><g data-name="Layer 60" id="Layer_60"><circle class="cls-1" cx="16" cy="16" r="1"/><path class="cls-1" d="M16,18a2,2,0,1,1,2-2A2,2,0,0,1,16,18Zm0-2Z"/><circle class="cls-1" cx="16" cy="5" r="1"/><path class="cls-1" d="M16,7a2,2,0,1,1,2-2A2,2,0,0,1,16,7Zm0-2Z"/><circle class="cls-1" cx="16" cy="27" r="1"/><path class="cls-1" d="M16,29a2,2,0,1,1,2-2A2,2,0,0,1,16,29Zm0-2Z"/></g></svg></a>
+          </div>
+          
+        </div>
+
+        <div class="thumbnail3 w-full flex flex-col gap-1">
+          <a href=""><img class="rounded-lg sm:h-[10rem]" src="img/thumbnail3.jpeg" alt=""></a>
+          <div class="decription flex justify-between sm:px-1 sm:gap-1 md:gap-3">
+            <a href=""><img class="w-9 h-9 rounded-full" src="img/random.jpeg" alt=""></a>
+            <div>
+              <p class="font-semibold sm:text-sm lg:text-base">The most Attractive Thumbnail.</p>
+              <div class="account flex gap-2">
+              <p class="sm:text-sm font-light text-gray-500 transition-all ease-in-out duration-300">Thumbnail Maker</p> 
+              <svg class="my-auto flex w-3" id="Icons" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#5f5d5d;}</style></defs><path class="cls-1" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm5.707,8.707-7,7a1,1,0,0,1-1.414,0l-3-3a1,1,0,0,1,1.414-1.414L10,14.586l6.293-6.293a1,1,0,0,1,1.414,1.414Z"/></svg>
+            </div>
+            <p class="sm:text-xs font-light text-gray-500 transition-all ease-in-out duration-300">1.5M views 1 month ago</p>
+            </div>
+            <a href=""><svg class="w-6 pb-8 flex items-start" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#000000;}</style></defs><title/><g data-name="Layer 60" id="Layer_60"><circle class="cls-1" cx="16" cy="16" r="1"/><path class="cls-1" d="M16,18a2,2,0,1,1,2-2A2,2,0,0,1,16,18Zm0-2Z"/><circle class="cls-1" cx="16" cy="5" r="1"/><path class="cls-1" d="M16,7a2,2,0,1,1,2-2A2,2,0,0,1,16,7Zm0-2Z"/><circle class="cls-1" cx="16" cy="27" r="1"/><path class="cls-1" d="M16,29a2,2,0,1,1,2-2A2,2,0,0,1,16,29Zm0-2Z"/></g></svg></a>
+          </div>
+          
+        </div>
+
+        <div class="thumbnail4 w-full flex flex-col gap-1">
+          <a href=""><img class="rounded-lg" src="img/thumbnail4.jpeg" alt=""></a>
+          <div class="decription flex justify-between sm:px-1 sm:gap-1 md:gap-3">
+            <a href=""><img class="w-9 h-9 rounded-full" src="img/random.jpeg" alt=""></a>
+            <div>
+              <p class="font-semibold sm:text-sm lg:text-base">The most Attractive Thumbnail.</p>
+              <div class="account flex gap-2">
+              <p class="sm:text-sm font-light text-gray-500 transition-all ease-in-out duration-300">Thumbnail Maker</p> 
+              <svg class="my-auto flex w-3" id="Icons" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#5f5d5d;}</style></defs><path class="cls-1" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm5.707,8.707-7,7a1,1,0,0,1-1.414,0l-3-3a1,1,0,0,1,1.414-1.414L10,14.586l6.293-6.293a1,1,0,0,1,1.414,1.414Z"/></svg>
+            </div>
+            <p class="sm:text-xs font-light text-gray-500 transition-all ease-in-out duration-300">1.5M views 1 month ago</p>
+            </div>
+            <a href=""><svg class="w-6 pb-8 flex items-start" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#000000;}</style></defs><title/><g data-name="Layer 60" id="Layer_60"><circle class="cls-1" cx="16" cy="16" r="1"/><path class="cls-1" d="M16,18a2,2,0,1,1,2-2A2,2,0,0,1,16,18Zm0-2Z"/><circle class="cls-1" cx="16" cy="5" r="1"/><path class="cls-1" d="M16,7a2,2,0,1,1,2-2A2,2,0,0,1,16,7Zm0-2Z"/><circle class="cls-1" cx="16" cy="27" r="1"/><path class="cls-1" d="M16,29a2,2,0,1,1,2-2A2,2,0,0,1,16,29Zm0-2Z"/></g></svg></a>
+          </div>
+        </div>
+
+        <div class="thumbnail5  flex flex-col gap-1">
+          <a href=""><img class="rounded-lg" src="img/thumbnail3.jpeg" alt=""></a>
+          <div class="decription flex justify-between sm:px-1 sm:gap-1 md:gap-3">
+            <a href=""><img class="w-9 h-9 rounded-full" src="img/random.jpeg" alt=""></a>
+            <div>
+              <p class="font-semibold sm:text-sm lg:text-base">The most Attractive Thumbnail.</p>
+              <div class="account flex gap-2">
+              <p class="sm:text-sm font-light text-gray-500 transition-all ease-in-out duration-300">Thumbnail Maker</p> 
+              <svg class="my-auto flex w-3" id="Icons" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#5f5d5d;}</style></defs><path class="cls-1" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm5.707,8.707-7,7a1,1,0,0,1-1.414,0l-3-3a1,1,0,0,1,1.414-1.414L10,14.586l6.293-6.293a1,1,0,0,1,1.414,1.414Z"/></svg>
+            </div>
+            <p class="sm:text-xs font-light text-gray-500 transition-all ease-in-out duration-300">1.5M views 1 month ago</p>
+            </div>
+            <a href=""><svg class="w-6 pb-8 flex items-start" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#000000;}</style></defs><title/><g data-name="Layer 60" id="Layer_60"><circle class="cls-1" cx="16" cy="16" r="1"/><path class="cls-1" d="M16,18a2,2,0,1,1,2-2A2,2,0,0,1,16,18Zm0-2Z"/><circle class="cls-1" cx="16" cy="5" r="1"/><path class="cls-1" d="M16,7a2,2,0,1,1,2-2A2,2,0,0,1,16,7Zm0-2Z"/><circle class="cls-1" cx="16" cy="27" r="1"/><path class="cls-1" d="M16,29a2,2,0,1,1,2-2A2,2,0,0,1,16,29Zm0-2Z"/></g></svg></a>
+          </div>
+          
+        </div>
+
+      </div>
+     </section>
+    </section>
+  </section>
+  </body>
+</html>

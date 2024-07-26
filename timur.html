@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Beth+Ellen&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      
+      module.exports = {
+        theme: {
+          extend: {
+             screens: {
+             sm: "340px",
+            ...defaultTheme.screens,
+             },
+            fontFamily: {
+              "beth-ellen": [
+                "Beth Ellen",
+                cursive,
+                ...defaultTheme.fontFamily.sans,
+              ],
+            },
+            
+          },
+        },
+      };
+    </script>
+    <title>TIMUR</title>
+  </head>
+  <body>
+    <section class="body">
+      <!-- navbar -->
+      <div
+        class="mx-auto w-full flex justify-between sm:px-5 sm:gap-auto lg:px-40 py-4 bg-transparent absolute transition-all ease-in-out duration-300"
+      >
+        <nav
+          class="flex pt-2 hidden lg:block space-x-10 text-xl bg-transparent transition-all ease-in-out duration-300"
+        >
+          <a href="" class="text-white hover:opacity-80">Home</a>
+          <a href=" " class="text-white hover:opacity-80">About Us</a>
+          <a href="" class="text-white hover:opacity-80">Menu</a>
+        </nav>
+
+        <img
+          class="logo w-[120px] pl-5"
+          src="/img/logo.png"
+          alt="logo lies here"
+        />
+
+        <nav
+          class="flex hidden lg:block space-x-10 text-xl bg-transparent transition-all ease-in-out duration-300"
+        >
+          <a href="gallery" class="text-white hover:opacity-80">Gallery</a>
+          <a href="contact us" class="text-white hover:opacity-80"
+            >Contact Us</a
+          >
+          <button
+            class="btn py-2 px-3 rounded-lg text-lg text-white bg-red-500 shadow-lg hover:opacity-80"
+          >
+            RESERVATION
+          </button>
+        </nav>
+
+        <button
+          id="hamburger-button"
+          class="text-4xl text-white sm:pr-5 lg:hidden cursor-pointer transition-all ease-in-out duration-300"
+        >
+          &#9776;
+        </button>
+      </div>
+
+      <!-- <section id="mobile-menu" class="absolute top-0 w-full text-3xl flex flex-col gap-5  justify-content-center">
+            <button class="text-5xl self-end px-6">
+                    &times;
+            </button>
+            <nav id="menu" class="flex flex-col gap-5 min-h-screen items-center py-8" aria-label="mobile">
+                <a href="" class="w-full font-semibold text-center py- 6 hover:opacity-90">Home</a>
+                <a href="" class="w-full font-semibold text-center py- 6 hover:opacity-90">About Us</a>
+                <a href="" class="w-full font-semibold text-center py- 6 hover:opacity-90">Menu</a>
+                <a href="" class="w-full font-semibold text-center py- 6 hover:opacity-90">Gallery</a>
+                <a href="" class="w-full font-semibold text-center py- 6 hover:opacity-90">Contact Us</a>
+            </nav>
+        </section> -->
+
+      <!-- hero_section -->
+      <section
+        class="hero md:h-[50%] lg:h-auto relative -z-10 transition-all ease-in-out duration-300"
+      >
+        <img
+          class="w-full sm:h-[40rem] lg:h-screen fixed transition-all ease-in-out duration-300"
+          src="/img/pizza.gif"
+          alt=""
+        />
+      </section>
+
+     
+      <section class="relative sm:top-[35rem] lg:top-[50rem] bg-white">
+        <!-- welcome_page -->
+          <section
+          class="md:mx-auto md:py-5 md:px-16 lg:mx-0 lg:flex-row xl:px-48 flex flex-col gap-5 transition-all ease-in-out duration-300"
+        >
+          <div class="flex flex-col gap-2 md:gap-5 px-5">
+            <div class="flex flex-col gap-2">
+              <h3
+                class="sm:text-md lg:text-2xl text-red-500 transition-all ease-in-out duration-300"
+              >
+                Welcome
+              </h3>
+              <h1
+                class="sm:text-2xl lg:text-6xl font-bold font-serif transition-all ease-in-out duration-300"
+              >
+                TIMUR <br />
+                Bar & Grill
+              </h1>
+              <p
+                class="sm:text-xs lg:text-base transition-all ease-in-out duration-300"
+              >
+                Authentic Nepalese & Indian Cuisine
+              </p>
+            </div>
+            <p
+              class="sm:text-sm lg:text-lg px-1 text-justify bg-red-300 bg-red-300 border-l-4 border-red-500 transition-all ease-in-out duration-300"
+            >
+              Home of authentic Indian, Nepalese and Indo-Chinese Cuisine. Timur
+              pepper straight from kingdom of Himalayas Nepal. It has the same
+              tongue tingling, mouth numbing properties, with intense citrus and
+              grapefruit notes.
+            </p>
+            <p
+              class="sm:text-sm lg:text-lg px-1 text-justify bg-red-300 border-l-4 border-red-500 transition-all ease-in-out duration-300"
+            >
+              Home of authentic Indian, Nepalese and Indo-Chinese Cuisine. Timur
+              pepper straight from kingdom of Himalayas Nepal.
+            </p>
+            <button
+              class="sm:px-2 lg:px-5 lg:py-2 lg:text-xl py-1 border-2 border-black w-fit text-sm hover:shadow-2xl hover:bg-black hover:text-white transition-all ease-in-out duration-300"
+            >
+              MENU
+            </button>
+          </div>
+          <img class="lg:w-[50%]" src="/img/chef.png" alt="" />
+        </section>
+
+        <!-- our menu -->
+        <section class="">
+          <header
+            class="text-center sm:text-xl lg:text-5xl lg:font-semibold py-5 font-serif underline decoration-red-500 underline-offset-4 transition-all ease-in-out duration-300"
+          >
+            OUR MENUS
+          </header>
+
+          <div
+            class="w-full sm:p-5 lg:px-16 lg:py-8 mx-auto bg-gradient-to-t from-red-600 to-red-400 grid grid-cols-3 place-items-center"
+          >
+            <div class="container p-3 sm:w-[110px] lg:w-[20rem] flex flex-col gap-3 transition-all ease-in-out duration-300">
+              <img class="" src="/img/paneer.png" alt="" />
+              <p
+                class="sm:text-xs lg:text-base text-center text-white font-serif transition-all ease-in-out duration-300"
+              >
+                BUTTER PANEER
+              </p>
+            </div>
+            <div class="container p-3 sm:w-[110px] lg:w-[20rem] flex flex-col gap-3 transition-all ease-in-out duration-300">
+              <img class="" src="/img/thaliset.png" alt="" />
+              <p
+                class="sm:text-xs lg:text-base text-center text-white font-serif transition-all ease-in-out duration-300"
+              >
+                THALISET
+              </p>
+            </div>
+            <div class="container p-3 sm:w-[110px] lg:w-[20rem] flex flex-col gap-3 transition-all ease-in-out duration-300">
+              <img class="" src="/img/momo.png" alt="" />
+              <p
+                class="sm:text-xs lg:text-base text-center text-white font-serif transition-all ease-in-out duration-300"
+              >
+                CHICKEN MO:MO
+              </p>
+            </div>
+            <div class="container p-3 sm:w-[110px] lg:w-[20rem] flex flex-col gap-3 transition-all ease-in-out duration-300">
+              <img class="" src="/img/momo.png" alt="" />
+              <p
+                class="sm:text-xs lg:text-base text-center text-white font-serif transition-all ease-in-out duration-300"
+              >
+                CHICKEN MO:MO
+              </p>
+            </div>
+            <div class="container p-3  sm:w-[110px] lg:w-[20rem] flex flex-col gap-3 transition-all ease-in-out duration-300">
+              <img class="" src="/img/roti.png" alt="" />
+              <p
+                class="sm:text-xs lg:text-base text-center text-white font-serif transition-all ease-in-out duration-300"
+              >
+                ROTI
+              </p>
+            </div>
+            <div class="container p-3  sm:w-[110px] lg:w-[20rem] flex flex-col gap-3 transition-all ease-in-out duration-300">
+              <img class="" src="/img/samosa.png" alt="" />
+              <p
+                class="sm:text-xs lg:text-base text-center text-white font-serif"
+              >
+                SAMOSA
+              </p>
+            </div>
+            <div class="container p-3  sm:w-[110px] lg:w-[20rem] flex flex-col gap-3 transition-all ease-in-out duration-300">
+              <img class="" src="/img/biryani1.png" alt="" />
+              <p
+                class="sm:text-xs lg:text-base text-center text-white font-serif transition-all ease-in-out duration-300"
+              >
+                BIRYANI
+              </p>
+            </div>
+            <div class="container p-3  sm:w-[110px] lg:w-[20rem] flex flex-col gap-3 transition-all ease-in-out duration-300">
+              <img class="" src="/img/paneer.png" alt="" />
+              <p
+                class="sm:text-xs lg:text-base text-center text-white font-serif transition-all ease-in-out duration-300"
+              >
+                BUTTER PANEER
+              </p>
+            </div>
+            <div class="container p-3  sm:w-[110px] lg:w-[20rem] flex flex-col gap-3 transition-all ease-in-out duration-300 ">
+              <img class="" src="/img/samosa.png" alt="" />
+              <p
+                class="sm:text-xs lg:text-base text-center text-white font-serif transition-all ease-in-out duration-300"
+              >
+                SAMOSA
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- book your reservation -->
+        <section
+          class="sm:m-2 lg:m-0 py-2 sm:rounded-xl lg:rounded-none flex flex-col gap-5 bg-white transition-all ease-in-out duration-300"
+        >
+          
+          <div class="mx-auto flex xl:px-[16rem] py-[2rem] gap-5">
+
+          <img class="sm:w-[15rem] xl:w-[20rem] rounded-lg sm:hidden lg:block transition-all ease-in-out duration-300" src="/img/sideimg.png" alt="">
+          
+
+          <div class="form mx-auto p-5 rounded-lg flex flex-col sm:gap-1 lg:gap-3 bg-gradient-to-l from-red-200 to-red-100 transition-all ease-in-out duration-300">
+
+            <header class="text-center">
+              <h1 class="text-red-500 sm:font-light lg:font-normal lg:text-xl font-beth-ellen transition-all ease-in-out duration-300">RESERVATION</h1>
+              <h2
+                class="text-serif lg:text-3xl font-semibold underline decoration-2 decoration-red-500 underline-offset-4 transition-all ease-in-out duration-300"
+              >
+                BOOK YOUR TABLE
+              </h2>
+            </header>
+
+            <p
+              class="rounded-lg sm:text-sm xl:text-lg font-light border-2 border-black pl-5 opacity-70 sm:w-[20rem] xl:w-[30rem] py-2 bg-gray-200 transition-all ease-in-out duration-300"
+            >
+              Full Name
+            </p>
+            <p
+              class="rounded-lg sm:text-sm xl:text-lg font-light border-2 border-black pl-5 opacity-70 sm:w-[20rem] xl:w-[30rem]  py-2 bg-gray-200 transition-all ease-in-out duration-300"
+            >
+              Your email
+            </p>
+            <p
+              class="rounded-lg sm:text-sm xl:text-lg font-light border-2 border-black pl-5 opacity-70 sm:w-[20rem] xl:w-[30rem]  py-2 bg-gray-200 transition-all ease-in-out duration-300"
+            >
+              Contact Number
+            </p>
+            <p
+              class="rounded-lg sm:text-sm xl:text-lg font-light border-2 border-black pl-5 opacity-70 sm:w-[20rem] xl:w-[30rem]  py-2 bg-gray-200 transition-all ease-in-out duration-300"
+            >
+              Date and Time
+            </p>
+            <p
+              class="rounded-lg sm:text-sm xl:text-lg font-light border-2 border-black pl-5 opacity-70 sm:w-[20rem] xl:w-[30rem]  py-2 bg-gray-200 transition-all ease-in-out duration-300"
+            >
+              No. of person
+            </p>
+            <button
+            class="mx-auto rounded-3xl xl:text-lg text-white font-serif bg-red-500 py-2 sm:w-[20rem] xl:w-[30rem]  hover:bg-red-600 transition-all ease-in-out duration-300"
+          >
+            Book A Table
+          </button>
+          </div>
+
+          <img class="sm:w-[15rem] xl:w-[20rem] rounded-lg sm:hidden lg:block transition-all ease-in-out duration-300" src="/img/sideimg.png" alt="">
+
+        </div>
+        </section>
+
+        <!-- we accept -->
+        <section
+          class="m-2 rounded-xl flex flex-col gap-5 lg:gap-12 py-5 bg-gradient-to-t from-red-100 to-red-50 transition-all ease-in-out duration-300"
+        >
+          <header
+            class="text-center sm:text-xl sm:font-semibold lg:text-5xl font-serif underline decoration-red-500 underline-offset-2 transition-all ease-in-out duration-300"
+          >
+            We Accept
+          </header>
+
+          <div class="mx-auto px-5 flex gap-5">
+            <a href="">
+              <img
+                class="sm:w-[4rem] lg:w-[11rem] bg-white py-1 rounded-md px-2 sm:h-[30px] lg:h-[5rem] transition-all ease-in-out duration-300"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/2560px-Stripe_Logo%2C_revised_2016.svg.png"
+                alt="stripe"
+            /></a>
+
+            <a href="">
+              <img
+                class="sm:w-[4rem] lg:w-[12rem] bg-white py-1 rounded-md px-2 sm:h-[30px] lg:h-[5rem] transition-all ease-in-out duration-300"
+                src="https://logos-world.net/wp-content/uploads/2020/08/PayPal-Logo.jpg"
+                alt="paypal"
+            /></a>
+
+            <a href="">
+              <img
+                class="sm:w-[4rem] lg:w-[12rem] bg-white py-1 rounded-md px-2 sm:h-[30px] lg:h-[5rem] transition-all ease-in-out duration-300"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1200px-Mastercard-logo.svg.png"
+                alt="masterCard"
+            /></a>
+
+            <a href=""
+              ><img
+                class="sm:w-[4rem] lg:w-[12rem] bg-white py-1 rounded-md px-2 sm:h-[30px] lg:h-[5rem] transition-all ease-in-out duration-300"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Apple_Pay_logo.svg/2560px-Apple_Pay_logo.svg.png"
+                alt="applePay"
+            /></a>
+
+            <a href=""
+              ><img
+                class="sm:w-[4rem] lg:w-[12rem] bg-white py-1 rounded-md px-2 sm:h-[30px] lg:h-[5rem] transition-all ease-in-out duration-300"
+                src="https://cdn1.iconfinder.com/data/icons/logos-brands-in-colors/436/Google_Pay_GPay_Logo-512.png"
+                alt="googlePay"
+            /></a>
+          </div>
+        </section>
+
+        <!-- footer -->
+        <section
+          class="p-5 bg-gradient-to-l from-red-200 to-red-50 border-t-2 border-gray-300 flex flex-col gap-5"
+        >
+          <div class="top flex lg:flex-col gap-2">
+            <img
+              class="w-[80px] mx-auto border shadow-md bg-white p-1 rounded-lg"
+              src="/img/logo.png"
+              alt="logo"
+            />
+            <p class="text-center text-sm">
+              Making a reservation at a Delicious restaurant is easy and takes
+              just a couple of minutes.
+            </p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h1 class="font-semibold underline decoration-1 underline-offset-2">
+              Quick Links
+            </h1>
+            <a class="text-sm font-semibold hover:text-blue-700" href=""
+              >Home</a
+            >
+            <a class="text-sm font-semibold hover:text-blue-700" href=""
+              >About Us</a
+            >
+            <a class="text-sm font-semibold hover:text-blue-700" href=""
+              >Menu</a
+            >
+            <a class="text-sm font-semibold hover:text-blue-700" href=""
+              >Contact Us</a
+            >
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <a class="text-sm font-semibold hover:text-blue-700" href=""
+              ><i class="fa-solid fa-map-location-dot"></i> xyzkjhdfksdk, jsd,
+              dshdjk</a
+            >
+            <a class="text-sm font-semibold hover:text-blue-700" href=""
+              ><i class="fa-solid fa-phone-volume"></i> +61 123 456 789</a
+            >
+            <a class="text-sm font-semibold hover:text-blue-700" href=""
+              ><i class="fa-solid fa-envelope"></i> timur@gmail.com</a
+            >
+          </div>
+
+          <div>
+            <h1 class="font-semibold">Follow us on:</h1>
+            <a class="hover:text-blue-700" href=""
+              ><i class="fa-brands fa-facebook"></i>
+            </a>
+            <a class="hover:text-blue-700" href=""
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </section>
+
+        <!-- copyrights -->
+        <section class="copyrights">
+          <div class="copyrights w-full bg-black py-1">
+            <p class="text-white text-sm text-center">
+              <i class="fa-solid fa-copyright"></i>
+              <span class="text-sm"> Copyrights Reserved 2024.</span>
+            </p>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <script>
+      var burgerMenu = document.getElementById("mobile-menu");
+      var overlay = document.getElementById("menu");
+      burgerMenu.addEventListener("click", function () {
+        this.classList.toggle("Close");
+
+        overlay.classList.toggle("overlay");
+      });
+    </script>
+  </body>
+</html>
