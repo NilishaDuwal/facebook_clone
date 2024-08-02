@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=`, initial-scale=1.0" />
+    <title>Dribble</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="w-full bg-black px-8">
+    <!-- navbar -->
+    <section
+      class="navbar w-full h-[6rem] px-16 flex items-center justify-between"
+    >
+      <nav class="left_nav flex gap-5">
+        <p
+          class="logo text-zinc-400 font-bold text-sm p-2 border-2 border-zinc-400 rounded-xl"
+        >
+          Logo here
+        </p>
+        <ul class="flex gap-3 items-center text-white text-sm">
+          <li class="px-4 py-2 border border-white rounded-3xl">About</li>
+          <li class="px-4 py-2 border border-white rounded-3xl">Market</li>
+          <li class="px-4 py-2 border border-white rounded-3xl">Resources</li>
+          <li class="px-4 py-2 border border-white rounded-3xl">Exchange</li>
+          <li class="px-4 py-2 border border-white rounded-3xl">Wallet</li>
+        </ul>
+      </nav>
+
+      <nav class="right_nav flex items-center justify-center gap-3">
+        <a href=""
+          ><svg
+            class="instagram size-4"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            fill="white"
+          >
+            <path
+              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+            />
+          </svg>
+        </a>
+
+        <a href=""
+          ><svg
+            class="youtube size-4"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 576 512"
+            fill="white"
+          >
+            <path
+              d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"
+            />
+          </svg>
+        </a>
+
+        <a href=""
+          ><svg
+            class="twitter size-4"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            fill="white"
+          >
+            <path
+              d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+            />
+          </svg>
+        </a>
+
+        <a href="">
+          <svg
+            class="facebook size-4"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+            fill="white"
+          >
+            <path
+              d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+            />
+          </svg>
+        </a>
+
+        <a href="">
+          <div class="flex items-center jusfity-center gap-1 w-[4rem]">
+            <svg
+              class="size-5"
+              enable-background="new 0 0 512 512"
+              height=""
+              id="Layer_1"
+              version="1.1"
+              viewBox="0 0 512 512"
+              width=""
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M256.002,7c-0.068,0-0.137,0-0.213,0c-0.029,0-0.061,0-0.098,0c-0.098,0-0.195,0.02-0.293,0.02  C118.146,7.331,7,118.68,7,256c0,137.281,111.146,248.65,248.398,248.98c0.098,0,0.195,0.02,0.293,0.02c0.037,0,0.068,0,0.098,0  c0.076,0,0.145,0,0.213,0C393.494,505,505,393.494,505,256C505,118.486,393.494,7,256.002,7z M265.957,156.011  c26.398-0.72,52.096-4.202,76.82-10.232c7.471,29.355,12.082,63.184,12.82,100.261h-89.641V156.011z M265.957,136.091V28.496  c26.865,7.431,54.061,43.225,71.395,98.122C314.357,132.161,290.488,135.391,265.957,136.091z M246.042,28.262v107.829  c-24.724-0.7-48.789-3.988-71.967-9.629C191.553,71.234,219.012,35.304,246.042,28.262z M246.042,155.991v90.048h-90.253  c0.729-37.136,5.369-71.004,12.829-100.378C193.547,151.75,219.43,155.291,246.042,155.991z M135.742,246.04H27.173  c2.198-51.2,21.272-98.121,51.813-135.277c22.177,12.217,45.706,22.216,70.354,29.686  C141.296,172.215,136.471,208.028,135.742,246.04z M135.742,265.96c0.729,37.992,5.554,73.805,13.599,105.572  c-24.639,7.489-48.177,17.488-70.354,29.704c-30.541-37.155-49.615-84.075-51.813-135.276H135.742z M155.789,265.96h90.253v89.932  c-26.611,0.7-52.504,4.261-77.433,10.368C161.148,336.906,156.518,303.058,155.789,265.96z M246.042,375.792v107.946  c-27.049-7.062-54.527-43.031-71.996-98.317C197.233,379.78,221.307,376.493,246.042,375.792z M265.957,483.504V375.792  c24.531,0.701,48.4,3.949,71.414,9.493C320.037,440.221,292.822,476.073,265.957,483.504z M265.957,355.892V265.96h89.641  c-0.738,37.038-5.35,70.828-12.781,100.164C318.053,360.093,292.375,356.592,265.957,355.892z M375.635,265.96h109.191  c-2.197,51.201-21.262,98.103-51.803,135.258c-22.354-12.295-46.086-22.371-70.947-29.88  C370.109,339.609,374.914,303.874,375.635,265.96z M375.635,246.04c-0.721-37.972-5.545-73.727-13.578-105.475  c24.842-7.509,48.576-17.566,70.908-29.86c30.58,37.155,49.664,84.096,51.861,135.335H375.635z M419.25,95.492  c-19.822,10.543-40.736,19.258-62.582,25.873c-11.652-37.467-27.994-68.047-47.33-88.123  C351.746,43.417,389.621,65.359,419.25,95.492z M201.874,33.437c-19.23,20.037-35.502,50.481-47.106,87.753  c-21.633-6.595-42.37-15.232-62.007-25.698C122.192,65.554,159.777,43.669,201.874,33.437z M92.692,416.43  c19.657-10.485,40.404-19.122,62.056-25.717c11.604,37.311,27.876,67.794,47.125,87.85  C159.748,468.312,122.144,446.407,92.692,416.43z M309.338,478.738c19.357-20.076,35.697-50.676,47.35-88.201  c21.865,6.635,42.797,15.33,62.621,25.912C389.68,446.602,351.785,468.583,309.338,478.738z"
+                fill="white"
+              />
+            </svg>
+
+            <p class="text-white text-base">En</p>
+
+            <svg
+              class="mx-auto size-4"
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+            >
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: none;
+                  }
+                </style>
+              </defs>
+              <title />
+              <g data-name="Layer 2" id="Layer_2">
+                <path
+                  d="M16,21a1,1,0,0,1-.71-.29l-8-8a1,1,0,1,1,1.42-1.42L16,18.59l7.29-7.3a1,1,0,0,1,1.42,1.42l-8,8A1,1,0,0,1,16,21Z"
+                />
+              </g>
+              <g id="frame"><rect class="cls-1" height="32" width="32" /></g>
+            </svg>
+          </div>
+        </a>
+
+        <button
+          class="contact_us px-3 py-2 text-black bg-white text-sm font-semibold rounded-full"
+        >
+          Contact Us
+        </button>
+      </nav>
+    </section>
+
+    <!-- hero -->
+    <section
+      class="hero pt-16 w-full h-[] px-16 flex flex-col items-center justify-center"
+    >
+      <div class="text1 w-full flex items-center justify-between gap-5">
+        <p class="mx-auto text-white text-7xl font-bold">INVEST SMART</p>
+        <p class="mx-auto text-white text-7xl font-bold">INVEST SECURE</p>
+      </div>
+
+      <div class="w-fit flex items-center justify-between">
+        <img
+          class="w-full relative top-12"
+          src="img/rings-removebg-preview.png"
+          alt=""
+        />
+        <div class="flex pr-8 flex-col gap-12">
+          <p class="text-gray-300 text-3xl">
+            Join the Feature of Finance With Our Trusted Cyryptocurrency
+            Platform. Secure, Transparent, And Efficient--Empowering You To Make
+            Smart Investment Desicions with Ease.
+          </p>
+
+          <button
+            onclick=""
+            class="connectWallet w-fit flex items-center gap-2 text-white text-xl font-semibold rounded-full px-8 py-4 bg-orange-500"
+          >
+            CONNECT WALLET
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+              />
+            </svg>
+          </button>
+
+          <p
+            class="mx-auto py-5 relative top-8 left-8 text-white font-semibold text-5xl"
+          >
+            DECENTRALIZATION
+          </p>
+
+          <div
+            class="bg-gray-500 rounded-[50%] relative ms-auto bottom-16 right-40 p-6 bg-opacity-70"
+          >
+            <button class="w-fit bg-orange-500 p-4 rounded-[50%] flex">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="orange"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="white"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- our Feature -->
+    <section
+      class="features w-full mx-auto px-32 py-8 flex flex-col gap-16 bg-zinc-900"
+    >
+      <header
+        class="mx-auto flex items-center justify-between py-5 w-full mx-auto"
+      >
+        <p class="text-white text-5xl font-semibold">OUR FEATURES</p>
+        <button>
+          <svg
+            class="size-12 rounded-[50%] p-3 bg-orange-500"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2.5"
+            stroke="white"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <div class="mx-auto flex items-center justify-center">
+        <div
+          class="first border-2 border-zinc-600 border-r rounded-l-xl w-1/4 py-8 px-8 flex flex-col gap-5"
+        >
+          <svg
+            class="size-16"
+            id="Icons"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: white;
+                }
+              </style>
+            </defs>
+            <path
+              class="cls-1"
+              d="M22.814,9.216l-.826-5.368A1,1,0,0,0,21,3C15.533,3,12.731.316,12.707.293a1,1,0,0,0-1.41,0C11.269.316,8.467,3,3,3a1,1,0,0,0-.988.848L1.186,9.216A12.033,12.033,0,0,0,7.3,21.576l4.22,2.3a1,1,0,0,0,.958,0l4.22-2.3A12.033,12.033,0,0,0,22.814,9.216Zm-7.072,10.6L12,21.861,8.258,19.82a10.029,10.029,0,0,1-5.1-10.3l.7-4.541A14.717,14.717,0,0,0,12,2.3,14.717,14.717,0,0,0,20.139,4.98l.7,4.54A10.029,10.029,0,0,1,15.742,19.82Z"
+            />
+            <path
+              class="cls-1"
+              d="M15.293,8.293,10,13.586,8.707,12.293a1,1,0,1,0-1.414,1.414l2,2a1,1,0,0,0,1.414,0l6-6a1,1,0,0,0-1.414-1.414Z"
+            />
+          </svg>
+          <div class="flex flex-col gap-5 px-2">
+            <h3 class="text-white text-2xl font-semibold">SECURE WALLETS</h3>
+            <p class="text-white text-xl font-semibold pr-14">
+              Safely store digital assets with our friendly, encrypted wallets.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="second border-2 border-zinc-600 border-r w-1/4 py-8 px-8 flex flex-col gap-5"
+        >
+          <svg
+            class="size-16"
+            fill="white"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M19.375 15.103A8.001 8.001 0 0 0 8.03 5.053l-.992-1.737A9.996 9.996 0 0 1 17 3.34c4.49 2.592 6.21 8.142 4.117 12.77l1.342.774-4.165 2.214-.165-4.714 1.246.719zM4.625 8.897a8.001 8.001 0 0 0 11.345 10.05l.992 1.737A9.996 9.996 0 0 1 7 20.66C2.51 18.068.79 12.518 2.883 7.89L1.54 7.117l4.165-2.214.165 4.714-1.246-.719zM8.5 14H14a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1V7h2v1h2.5v2H10a.5.5 0 1 0 0 1h4a2.5 2.5 0 1 1 0 5h-1v1h-2v-1H8.5v-2z"
+              />
+            </g>
+          </svg>
+
+          <div class="flex flex-col gap-5 px-2">
+            <h3 class="text-white text-2xl font-semibold">
+              Instant |Transactions
+            </h3>
+            <p class="text-white text-xl font-semibold pr-8">
+              Lightning-fast transactions for seamless cryptocurrency transfers.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="third border-2 border-zinc-600 border-r w-1/4 py-8 px-8 flex flex-col gap-5"
+        >
+          <svg
+            class="size-16"
+            height="100%"
+            fill="white"
+            style="
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+              stroke-linejoin: round;
+              stroke-miterlimit: 2;
+            "
+            version="1.1"
+            viewBox="0 0 32 32"
+            width="100%"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:serif="http://www.serif.com/"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <path
+              d="M12.617,22.125c-2.156,-1.194 -3.617,-3.492 -3.617,-6.128c-0,-3.864 3.137,-7 7,-7c3.863,-0 7,3.136 7,7c-0,2.636 -1.461,4.934 -3.617,6.128c-0.483,0.268 -0.658,0.877 -0.391,1.359c0.268,0.483 0.877,0.658 1.36,0.391c2.771,-1.535 4.648,-4.489 4.648,-7.878c-0,-4.968 -4.033,-9 -9,-9c-4.967,-0 -9,4.032 -9,9c-0,3.389 1.877,6.343 4.648,7.878c0.483,0.267 1.092,0.092 1.36,-0.391c0.267,-0.482 0.092,-1.091 -0.391,-1.359Z"
+            />
+            <path
+              d="M18.247,18c-0.55,0.612 -1.346,0.997 -2.232,0.997c-0.893,-0 -1.695,-0.392 -2.245,-1.012c-0.366,-0.413 -0.999,-0.451 -1.412,-0.085c-0.413,0.367 -0.451,0.999 -0.085,1.412c0.917,1.033 2.254,1.685 3.742,1.685c1.476,-0 2.804,-0.641 3.719,-1.66c0.369,-0.41 0.335,-1.043 -0.075,-1.412c-0.411,-0.369 -1.043,-0.335 -1.412,0.075Z"
+            />
+            <path
+              d="M17,26.931l-0,-2.926c0,-0.552 -0.448,-1 -1,-1c-0.552,0 -1,0.448 -1,1l-0,3.977c0,0.552 0.448,0.994 1,0.994c0.04,0 0.078,0 0.117,-0.001c5.999,-0.053 11.031,-4.171 12.47,-9.724c0.028,-0.107 0.054,-0.215 0.079,-0.323c1.324,-0.309 2.312,-1.498 2.312,-2.916c0,-1.415 -0.984,-2.602 -2.304,-2.913c-1.32,-5.77 -6.496,-10.082 -12.674,-10.082c-6.175,0 -11.349,4.308 -12.672,10.074c-1.337,0.299 -2.338,1.494 -2.338,2.921c0,1.653 1.342,2.994 2.994,2.994c1.653,0 2.994,-1.341 2.994,-2.994c0,-1.17 -0.673,-2.184 -1.652,-2.676c1.192,-4.777 5.522,-8.319 10.674,-8.319c5.147,0 9.473,3.536 10.671,8.305c-0.995,0.487 -1.681,1.509 -1.681,2.69c0,1.179 0.683,2.199 1.674,2.688l-0.013,0.049c-1.144,4.418 -4.978,7.76 -9.651,8.182Zm-13.016,-11.912c0.549,-0 0.994,0.445 0.994,0.993c0,0.549 -0.445,0.994 -0.994,0.994c-0.548,0 -0.994,-0.445 -0.994,-0.994c0,-0.548 0.446,-0.993 0.994,-0.993Zm24,-0c0.549,-0 0.994,0.445 0.994,0.993c0,0.549 -0.445,0.994 -0.994,0.994c-0.548,0 -0.994,-0.445 -0.994,-0.994c0,-0.548 0.446,-0.993 0.994,-0.993Z"
+            />
+            <g id="Icon" />
+          </svg>
+
+          <div class="flex flex-col gap-5 px-2">
+            <h3 class="text-white text-2xl font-semibold">
+              24/7 Customer Support
+            </h3>
+            <p class="text-white text-xl font-semibold pr-2">
+              Round-the-clock expert support for all your queries anywhere you
+              need.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="fourth border-2 border-zinc-600 rounded-r-xl w-1/4 py-8 px-12 flex flex-col gap-5"
+        >
+          <svg
+            class="size-16"
+            id="Icons"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: white;
+                }
+              </style>
+            </defs>
+            <path
+              class="cls-1"
+              d="M22.814,9.216l-.826-5.368A1,1,0,0,0,21,3C15.533,3,12.731.316,12.707.293a1,1,0,0,0-1.41,0C11.269.316,8.467,3,3,3a1,1,0,0,0-.988.848L1.186,9.216A12.033,12.033,0,0,0,7.3,21.576l4.22,2.3a1,1,0,0,0,.958,0l4.22-2.3A12.033,12.033,0,0,0,22.814,9.216Zm-7.072,10.6L12,21.861,8.258,19.82a10.029,10.029,0,0,1-5.1-10.3l.7-4.541A14.717,14.717,0,0,0,12,2.3,14.717,14.717,0,0,0,20.139,4.98l.7,4.54A10.029,10.029,0,0,1,15.742,19.82Z"
+            />
+            <path
+              class="cls-1"
+              d="M15.293,8.293,10,13.586,8.707,12.293a1,1,0,1,0-1.414,1.414l2,2a1,1,0,0,0,1.414,0l6-6a1,1,0,0,0-1.414-1.414Z"
+            />
+          </svg>
+          <div class="flex flex-col gap-5 px-1">
+            <h3 class="text-white text-2xl font-semibold">
+              FULL MARKTER ANALYSIS
+            </h3>
+            <p class="text-white font-semibold text-xl">
+              Stay ahead with real-time updates and comprehensive market
+              analysis
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- how it works -->
+    <section class="w-full flex flex-col gap-8">
+      <div class="banner flex flex-col py-32">
+        <div
+          class="w-full h-fit py-5 mx-auto flex items-center justify-between bg-orange-500 gap-5 origin-bottom -rotate-[4.5deg]"
+        >
+          <svg
+            class="flex items-center size-7 h-fit"
+            fill="white"
+            fill="white"
+            data-name="Layer 1"
+            id="Layer_1"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M29.51068,15.41064C19.78412,13.544,18.456,12.21582,16.58929,2.48926a.60015.60015,0,0,0-1.17871,0C13.54437,12.21582,12.21625,13.544,2.4892,15.41064a.60016.60016,0,0,0,0,1.17872c9.72705,1.86669,11.05517,3.19482,12.92138,12.92138a.60027.60027,0,0,0,1.17871,0c1.8667-9.72656,3.19483-11.05469,12.92139-12.92138a.60016.60016,0,0,0,0-1.17872Z"
+            />
+          </svg>
+          <p class="text-white text-3xl font-semibold">ALTCOIN</p>
+
+          <svg
+            class="flex items-center size-7 h-fit"
+            fill="white"
+            fill="white"
+            data-name="Layer 1"
+            id="Layer_1"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M29.51068,15.41064C19.78412,13.544,18.456,12.21582,16.58929,2.48926a.60015.60015,0,0,0-1.17871,0C13.54437,12.21582,12.21625,13.544,2.4892,15.41064a.60016.60016,0,0,0,0,1.17872c9.72705,1.86669,11.05517,3.19482,12.92138,12.92138a.60027.60027,0,0,0,1.17871,0c1.8667-9.72656,3.19483-11.05469,12.92139-12.92138a.60016.60016,0,0,0,0-1.17872Z"
+            />
+          </svg>
+          <p class="text-white text-3xl font-semibold">BLOCKCHAIN</p>
+
+          <svg
+            class="flex items-center size-7 h-fit"
+            fill="white"
+            data-name="Layer 1"
+            id="Layer_1"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M29.51068,15.41064C19.78412,13.544,18.456,12.21582,16.58929,2.48926a.60015.60015,0,0,0-1.17871,0C13.54437,12.21582,12.21625,13.544,2.4892,15.41064a.60016.60016,0,0,0,0,1.17872c9.72705,1.86669,11.05517,3.19482,12.92138,12.92138a.60027.60027,0,0,0,1.17871,0c1.8667-9.72656,3.19483-11.05469,12.92139-12.92138a.60016.60016,0,0,0,0-1.17872Z"
+            />
+          </svg>
+          <p class="text-white text-3xl font-semibold">SATOSHI</p>
+
+          <svg
+            class="flex items-center size-7 h-fit"
+            fill="white"
+            data-name="Layer 1"
+            id="Layer_1"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M29.51068,15.41064C19.78412,13.544,18.456,12.21582,16.58929,2.48926a.60015.60015,0,0,0-1.17871,0C13.54437,12.21582,12.21625,13.544,2.4892,15.41064a.60016.60016,0,0,0,0,1.17872c9.72705,1.86669,11.05517,3.19482,12.92138,12.92138a.60027.60027,0,0,0,1.17871,0c1.8667-9.72656,3.19483-11.05469,12.92139-12.92138a.60016.60016,0,0,0,0-1.17872Z"
+            />
+          </svg>
+          <p class="text-white text-3xl font-semibold">MINING</p>
+
+          <svg
+            class="flex items-center size-7 h-fit"
+            fill="white"
+            data-name="Layer 1"
+            id="Layer_1"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M29.51068,15.41064C19.78412,13.544,18.456,12.21582,16.58929,2.48926a.60015.60015,0,0,0-1.17871,0C13.54437,12.21582,12.21625,13.544,2.4892,15.41064a.60016.60016,0,0,0,0,1.17872c9.72705,1.86669,11.05517,3.19482,12.92138,12.92138a.60027.60027,0,0,0,1.17871,0c1.8667-9.72656,3.19483-11.05469,12.92139-12.92138a.60016.60016,0,0,0,0-1.17872Z"
+            />
+          </svg>
+          <p class="text-white text-3xl font-semibold">FORK</p>
+
+          <svg
+            class="flex items-center size-7 h-fit"
+            fill="white"
+            data-name="Layer 1"
+            id="Layer_1"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M29.51068,15.41064C19.78412,13.544,18.456,12.21582,16.58929,2.48926a.60015.60015,0,0,0-1.17871,0C13.54437,12.21582,12.21625,13.544,2.4892,15.41064a.60016.60016,0,0,0,0,1.17872c9.72705,1.86669,11.05517,3.19482,12.92138,12.92138a.60027.60027,0,0,0,1.17871,0c1.8667-9.72656,3.19483-11.05469,12.92139-12.92138a.60016.60016,0,0,0,0-1.17872Z"
+            />
+          </svg>
+          <p class="text-white text-3xl font-semibold">EXCHANGE</p>
+
+          <svg
+            class="flex items-center size-7 h-fit"
+            fill="white"
+            data-name="Layer 1"
+            id="Layer_1"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M29.51068,15.41064C19.78412,13.544,18.456,12.21582,16.58929,2.48926a.60015.60015,0,0,0-1.17871,0C13.54437,12.21582,12.21625,13.544,2.4892,15.41064a.60016.60016,0,0,0,0,1.17872c9.72705,1.86669,11.05517,3.19482,12.92138,12.92138a.60027.60027,0,0,0,1.17871,0c1.8667-9.72656,3.19483-11.05469,12.92139-12.92138a.60016.60016,0,0,0,0-1.17872Z"
+            />
+          </svg>
+          <p class="text-white text-3xl font-semibold">TOKEN</p>
+
+          <svg
+            class="flex items-center size-7 h-fit"
+            fill="white"
+            data-name="Layer 1"
+            id="Layer_1"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M29.51068,15.41064C19.78412,13.544,18.456,12.21582,16.58929,2.48926a.60015.60015,0,0,0-1.17871,0C13.54437,12.21582,12.21625,13.544,2.4892,15.41064a.60016.60016,0,0,0,0,1.17872c9.72705,1.86669,11.05517,3.19482,12.92138,12.92138a.60027.60027,0,0,0,1.17871,0c1.8667-9.72656,3.19483-11.05469,12.92139-12.92138a.60016.60016,0,0,0,0-1.17872Z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-16">
+        <header class="steps flex items-center justify-between px-32">
+          <h1 class="text-white text-5xl font-bold">HOW IT WORKS</h1>
+          <p class="text-gray-500 text-xl font-semibold text-right w-1/2 px-8">
+            Embark on your crypto journey: Set up secure wallets, master
+            transactions effortlessly, and explore digital currency essentials.
+          </p>
+        </header>
+
+        <div class="relative flex items-center justify-center px-16 py-5">
+          <div
+            class="step_1 flex flex-col gap-3 w-1/4 border-r-2 border-gray-500 px-8 p-2 pb-8"
+          >
+            <p class="text-white text-5xl font-bold text-right">1.</p>
+            <p class="text-white text-3xl font-semibold text-right">
+              Create a Wallet
+            </p>
+            <p class="text-white text-right">
+              Choose and set up a digital wallet to securely store your
+              cryptocurrency.
+            </p>
+          </div>
+
+          <div
+            class="step_2 relative top-16 flex flex-col gap-3 w-1/4 border-r-2 border-gray-500 px-8 p-2 pb-8"
+          >
+            <p class="text-white text-5xl font-bold text-right">2.</p>
+            <p class="text-white text-4xl font-semibold text-right">
+              Buy <br />
+              Cryptocurrency
+            </p>
+            <p class="text-white text-right">
+              Choose and set up a digital wallet to securely store your
+              cryptocurrency.
+            </p>
+          </div>
+
+          <div
+            class="step_3 w-1/4 relative top-32 flex flex-col gap-3 border-r-2 border-gray-500 px-8 p-2 pb-8"
+          >
+            <p class="text-white text-5xl font-bold text-right">3.</p>
+            <p class="text-white text-3xl font-semibold text-right">
+              Create a Wallet
+            </p>
+            <p class="text-white text-right">
+              Choose and set up a digital wallet to securely store your
+              cryptocurrency.
+            </p>
+          </div>
+
+          <div
+            class="step_4 w-1/4 relative top-44 flex flex-col gap-3 px-8 p-2 pb-8"
+          >
+            <p class="text-white text-5xl font-bold text-right">4.</p>
+            <p class="text-white text-3xl font-semibold text-right">
+              Create a Wallet
+            </p>
+            <p class="text-white text-right">
+              Choose and set up a digital wallet to securely store your
+              cryptocurrency.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- market trends -->
+    <section
+      class="market_trends w-full px-24 py-8 relative top-48 flex flex-col gap-16"
+    >
+      <header class="w-full flex items-center justify-between">
+        <h1 class="text-white text-5xl font-semibold">MARKET TRENDS</h1>
+        <button
+          class="text-white px-7 p-5 bg-orange-500 rounded-full flex items-center gap-3"
+        >
+          TRACK MARKET CHANGES
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="orange"
+            viewBox="0 0 24 24"
+            stroke-width="2.5"
+            stroke="white"
+            class="size-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <table
+        class="w-full flex flex-col items-center justify-between py-5 gap-5 px-5 border-box"
+      >
+        <thead class="w-full">
+          <tr
+            class="heading w-full border-b border-gray-500 flex items-center justify-between py-2"
+          >
+            <th class="text-gray-500 text-lg list-none">Crypto Currency</th>
+            <th class="text-gray-500 text-lg list-none">Price(USD)</th>
+            <th class="text-gray-500 text-lg list-none">24h Change</th>
+            <th class="text-gray-500 text-lg list-none">7d Change</th>
+            <th class="text-gray-500 text-lg list-none">Market Cap(USD)</th>
+            <th class="text-gray-500 text-lg list-none">Volume(24h USD)</th>
+            <th class="text-gray-500 text-lg list-none">Circulating Supply</th>
+            <th class="text-gray-500 text-lg list-none">Social Sentiment</th>
+          </tr>
+        </thead>
+
+        <tbody class="w-full flex flex-col gap-5">
+          <tr class="bitcoin w-full flex items-center justify-between">
+            <td class="flex items-center gap-2 w-[11rem]">
+              <svg
+                class="size-6"
+                height="512px"
+                id="svg2"
+                preserveAspectRatio="xMidYMid"
+                version="1.1"
+                viewBox="0 0 1 1"
+                width="512px"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:cc="http://creativecommons.org/ns#"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                xmlns:svg="http://www.w3.org/2000/svg"
+              >
+                <defs id="defs4">
+                  <filter color-interpolation-filters="sRGB" id="_drop-shadow">
+                    <feGaussianBlur
+                      id="feGaussianBlur7"
+                      in="SourceAlpha"
+                      result="blur-out"
+                      stdDeviation="1"
+                    />
+                    <feBlend
+                      id="feBlend9"
+                      in="SourceGraphic"
+                      in2="blur-out"
+                      mode="normal"
+                    />
+                  </filter>
+                  <linearGradient
+                    id="coin-gradient"
+                    x1="0%"
+                    x2="0%"
+                    y1="0%"
+                    y2="100%"
+                  >
+                    <stop id="stop12" offset="0%" style="stop-color: #f9aa4b" />
+                    <stop
+                      id="stop14"
+                      offset="100%"
+                      style="stop-color: #f7931a"
+                    />
+                  </linearGradient>
+                </defs>
+                <g id="g16" transform="scale(0.015625)">
+                  <path
+                    d="m 63.0359,39.741 c -4.274,17.143 -21.637,27.576 -38.782,23.301 -17.138,-4.274 -27.571,-21.638 -23.295,-38.78 4.272,-17.145 21.635,-27.579 38.775,-23.305 17.144,4.274 27.576,21.64 23.302,38.784 z"
+                    id="coin"
+                    style="fill: url(#coin-gradient)"
+                  />
+                  <path
+                    d="m 46.1009,27.441 c 0.637,-4.258 -2.605,-6.547 -7.038,-8.074 l 1.438,-5.768 -3.511,-0.875 -1.4,5.616 c -0.923,-0.23 -1.871,-0.447 -2.813,-0.662 l 1.41,-5.653 -3.509,-0.875 -1.439,5.766 c -0.764,-0.174 -1.514,-0.346 -2.242,-0.527 l 0.004,-0.018 -4.842,-1.209 -0.934,3.75 c 0,0 2.605,0.597 2.55,0.634 1.422,0.355 1.679,1.296 1.636,2.042 l -1.638,6.571 c 0.098,0.025 0.225,0.061 0.365,0.117 -0.117,-0.029 -0.242,-0.061 -0.371,-0.092 l -2.296,9.205 c -0.174,0.432 -0.615,1.08 -1.609,0.834 0.035,0.051 -2.552,-0.637 -2.552,-0.637 l -1.743,4.019 4.569,1.139 c 0.85,0.213 1.683,0.436 2.503,0.646 l -1.453,5.834 3.507,0.875 1.439,-5.772 c 0.958,0.26 1.888,0.5 2.798,0.726 l -1.434,5.745 3.511,0.875 1.453,-5.823 c 5.987,1.133 10.489,0.676 12.384,-4.739 1.527,-4.36 -0.076,-6.875 -3.226,-8.515 2.294,-0.529 4.022,-2.038 4.483,-5.155 z m -8.022,11.249 c -1.085,4.36 -8.426,2.003 -10.806,1.412 l 1.928,-7.729 c 2.38,0.594 10.012,1.77 8.878,6.317 z m 1.086,-11.312 c -0.99,3.966 -7.1,1.951 -9.082,1.457 l 1.748,-7.01 c 1.982,0.494 8.365,1.416 7.334,5.553 z"
+                    id="symbol"
+                    style="fill: #ffffff"
+                  />
+                </g>
+              </svg>
+              <p class="font-semibold text-xl text-white">Bitcoin</p>
+            </td>
+            <td class="font-semibold text-xl text-white">$30,000</td>
+            <td class="font-semibold text-xl text-green-600">+2.5%</td>
+            <td class="font-semibold text-xl text-green-600">+5.0%</td>
+            <td class="font-semibold text-xl text-white">$600 Billion</td>
+            <td class="font-semibold text-xl text-white">$30 Billion</td>
+            <td class="font-semibold text-xl text-white">18.7 Million</td>
+            <td class="font-semibold text-xl text-white">Positive</td>
+          </tr>
+
+          <tr class="ehtereum w-full flex items-center justify-between py-2">
+            <td class="font-semibold text-xl w-[11rem] text-white flex gap-2">
+              <svg
+                class="size-6 bg-purple-500 p-1 rounded-[50%]"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"
+                />
+              </svg>
+
+              Ethereum(ETH)
+            </td>
+            <td class="font-semibold text-xl text-white">$2,000</td>
+            <td class="font-semibold text-xl text-red-600">-1.0%</td>
+            <td class="font-semibold text-xl text-green-600">+3.0%</td>
+            <td class="font-semibold text-xl text-white">$230 Billion</td>
+            <td class="font-semibold text-xl text-white">$15 Billion</td>
+            <td class="font-semibold text-xl text-white">114.5 Million</td>
+            <td class="font-semibold text-xl text-white">Neutral</td>
+          </tr>
+
+          <tr class="ripple w-full flex items-center justify-between py-2">
+            <td class="font-semibold w-[11rem] text-xl text-white flex gap-2">
+              <svg
+                class="size-6 bg-blue-600 p-1 rounded-[50%]"
+                fill="none"
+                height="15"
+                viewBox="0 0 15 15"
+                width="15"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4.19339 5.15499L1.1326 1.83914L1.8674 1.16086L4.92819 4.47671C6.31406 5.97807 8.68594 5.97807 10.0718 4.47671L13.1326 1.16086L13.8674 1.83914L10.8066 5.15499C9.02478 7.08531 5.97522 7.08531 4.19339 5.15499ZM10.0718 10.5233C8.68594 9.02193 6.31406 9.02193 4.92819 10.5233L1.8674 13.8391L1.1326 13.1609L4.19339 9.84501C5.97522 7.91469 9.02478 7.91469 10.8066 9.84501L13.8674 13.1609L13.1326 13.8391L10.0718 10.5233Z"
+                  fill="white"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              Ripple(XRP)
+            </td>
+            <td class="font-semibold text-xl text-white">$0.50</td>
+            <td class="font-semibold text-xl text-green-600">+4.0%</td>
+            <td class="font-semibold text-xl text-green-600">+10.0%</td>
+            <td class="font-semibold text-xl text-white">$25 Billion</td>
+            <td class="font-semibold text-xl text-white">$2 Billion</td>
+            <td class="font-semibold text-xl text-white">50 Billion</td>
+            <td class="font-semibold text-xl text-white">Positive</td>
+          </tr>
+
+          <tr class="litecoin w-full flex items-center justify-between py-2">
+            <td class="font-semibold w-[11rem] text-xl text-white flex gap-2">
+              <svg
+                class="icon icon-tabler icon-tabler-currency-litecoin size-6 p-0.5 bg-blue-500 rounded-[50%]"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0 0h24v24H0z" fill="none" stroke="none" />
+                <path d="M18 19h-8.194a2 2 0 0 1 -1.98 -2.283l1.674 -11.717" />
+                <path d="M14 9l-9 4" />
+              </svg>
+              Litecoin(LTC)
+            </td>
+            <td class="font-semibold text-xl text-white">$150</td>
+            <td class="font-semibold text-xl text-green-600">+3.0%</td>
+            <td class="font-semibold text-xl text-green-600">+7.0%</td>
+            <td class="font-semibold text-xl text-white">$10 Billion</td>
+            <td class="font-semibold text-xl text-white">$1 Billion</td>
+            <td class="font-semibold text-xl text-white">66.8 Billion</td>
+            <td class="font-semibold text-xl text-white">Neutral</td>
+          </tr>
+
+          <tr class="cardano w-full flex items-center justify-between py-2">
+            <td class="font-semibold w-[11rem] text-xl text-white flex gap-2">
+              <svg
+                class="size-6"
+                height="256"
+                viewBox="0 0 256 256"
+                width="256"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #3468d1;
+                    }
+
+                    .cls-2 {
+                      fill: #fff;
+                      fill-rule: evenodd;
+                    }
+                  </style>
+                </defs>
+                <g data-name="cardano ada" id="cardano_ada">
+                  <g data-name="cardano ada" id="cardano_ada-2">
+                    <circle
+                      class="cls-1"
+                      cx="128"
+                      cy="128"
+                      data-name="Эллипс 6"
+                      id=""
+                      r="128"
+                    />
+                    <path
+                      class="cls-2"
+                      d="M265.727,717.735a12.652,12.652,0,1,1-12.654,12.652A12.654,12.654,0,0,1,265.727,717.735Zm30.546,0a12.652,12.652,0,1,1-12.655,12.652A12.654,12.654,0,0,1,296.273,717.735Zm0,53.226a12.652,12.652,0,1,1-12.655,12.652A12.653,12.653,0,0,1,296.273,770.961Zm-30.546,0a12.652,12.652,0,1,1-12.654,12.652A12.653,12.653,0,0,1,265.727,770.961Zm-15.709-26.177a12.652,12.652,0,1,1-12.654,12.652A12.654,12.654,0,0,1,250.018,744.784Zm61.964,0a12.652,12.652,0,1,1-12.655,12.652A12.653,12.653,0,0,1,311.982,744.784Zm14.4-21.813a7.853,7.853,0,1,1-7.855,7.853A7.853,7.853,0,0,1,326.382,722.971Zm0,52.352a7.853,7.853,0,1,1-7.855,7.853A7.853,7.853,0,0,1,326.382,775.323Zm-90.764,0a7.853,7.853,0,1,1-7.854,7.853A7.854,7.854,0,0,1,235.618,775.323Zm0-52.352a7.853,7.853,0,1,1-7.854,7.853A7.854,7.854,0,0,1,235.618,722.971ZM281,696.794a7.853,7.853,0,1,1-7.855,7.853A7.853,7.853,0,0,1,281,696.794ZM281,801.5a7.853,7.853,0,1,1-7.855,7.853A7.853,7.853,0,0,1,281,801.5Zm33.6,7.853a6.544,6.544,0,1,1-6.546,6.544A6.544,6.544,0,0,1,314.6,809.353Zm-67.2,0a6.544,6.544,0,1,1-6.546,6.544A6.544,6.544,0,0,1,247.4,809.353Zm0-117.794a6.544,6.544,0,1,1-6.546,6.544A6.544,6.544,0,0,1,247.4,691.559Zm67.2,0a6.544,6.544,0,1,1-6.546,6.544A6.544,6.544,0,0,1,314.6,691.559Zm34.036,58.461a6.544,6.544,0,1,1-6.545,6.544A6.545,6.545,0,0,1,348.636,750.02Zm-135.273,0a6.544,6.544,0,1,1-6.545,6.544A6.544,6.544,0,0,1,213.363,750.02Zm-4.8-40.138a5.236,5.236,0,1,1-5.236,5.235A5.236,5.236,0,0,1,208.563,709.882Zm0,83.765a5.236,5.236,0,1,1-5.236,5.235A5.236,5.236,0,0,1,208.563,793.647Zm144.873,0a5.236,5.236,0,1,1-5.236,5.235A5.236,5.236,0,0,1,353.436,793.647Zm0-83.765a5.236,5.236,0,1,1-5.236,5.235A5.236,5.236,0,0,1,353.436,709.882ZM281,668a5.236,5.236,0,1,1-5.237,5.235A5.235,5.235,0,0,1,281,668Zm0,167.529a5.236,5.236,0,1,1-5.237,5.236A5.236,5.236,0,0,1,281,835.529Zm46.254-3.49a4.363,4.363,0,1,1-4.363,4.363A4.363,4.363,0,0,1,327.254,832.039Zm-92.509,0a4.363,4.363,0,1,1-4.363,4.363A4.363,4.363,0,0,1,234.745,832.039Zm0-158.8a4.363,4.363,0,1,1-4.363,4.363A4.363,4.363,0,0,1,234.745,673.235Zm92.509,0a4.363,4.363,0,1,1-4.363,4.363A4.363,4.363,0,0,1,327.254,673.235Zm45.382,79.4A4.363,4.363,0,1,1,368.273,757,4.363,4.363,0,0,1,372.636,752.637Zm-183.273,0A4.363,4.363,0,1,1,185,757,4.363,4.363,0,0,1,189.363,752.637Z"
+                      data-name="Эллипс 6 копия 29"
+                      id="Эллипс_6_копия_29"
+                      transform="translate(-152 -629)"
+                    />
+                  </g>
+                </g>
+              </svg>
+              Cardano(ADA)
+            </td>
+            <td class="font-semibold text-xl text-white">$1.20</td>
+            <td class="font-semibold text-xl text-green-600">+2.0%</td>
+            <td class="font-semibold text-xl text-green-600">+6.0%</td>
+            <td class="font-semibold text-xl text-white">$10 Billion</td>
+            <td class="font-semibold text-xl text-white">$1 Billion</td>
+            <td class="font-semibold text-xl text-white">33.1 Billion</td>
+            <td class="font-semibold text-xl text-white">Positive</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- discover -->
+    <section
+      class="discover border-2 border-red-500 relative flex flex-col items-center top-48 py-24 px-48 gap-8"
+    >
+      <div class="flex flex-col items-center gap-5">
+        <p class="text-white text-6xl text-center leading-[4.5rem] font-bold">
+          DISCOVER REAL-TIME CRYPTO INSIGHTS FOR INFORMED INVESTING
+        </p>
+        <p class="text-gray-500 text-center text-xl w-[40rem] px-5">
+          Explore real-time trends, analyze market data,and make informed
+          decisions with our comprehensive tools. Start your journey to
+          financial success today!
+        </p>
+      </div>
+      <div class="flex gap-5">
+        <p
+          class="w-[20rem] flex items-center text-white p-4 bg-zinc-800 rounded-full border border-gray-600"
+        >
+          You're Email Address
+        </p>
+        <button
+          class="bg-orange-500 p-4 text-white rounded-full flex items-center gap-2"
+        >
+          JOIN WAITLIST
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="orange"
+            viewBox="0 0 24 24"
+            stroke-width="2.5"
+            stroke="white"
+            class="size-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+            />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section class="relative top-48 flex px-8">
+      <div
+        class="flex flex-col w-1/2 gap-3 py-8 pr-3 border-r border-b border-gray-600"
+      >
+        <p
+          class="logo w-fit text-zinc-400 font-bold text-sm p-2 border-2 border-zinc-400 rounded-xl"
+        >
+          Logo here
+        </p>
+        <p class="text-gray-500 font-semibold text-base">
+          Navigate the future of finance with real-time insights for smarter
+          cryptocurrency decisions. Start investing wisely today.
+        </p>
+      </div>
+
+      <div
+        class="w-1/4 border-r border-b border-gray-600 flex flex-col items-center justify-center gap-3"
+      >
+        <p class="text-gray-400 font-semibold">Contact</p>
+        <p class="text-gray-400 font-semibold">FAQ</p>
+        <p class="text-gray-400 font-semibold">Privacy Policy</p>
+      </div>
+
+      <div
+        class="w-1/4 border-r border-b border-gray-600 flex flex-col items-center justify-center gap-3"
+      >
+        <p class="text-gray-400 font-semibold">Wallet</p>
+        <p class="text-gray-400 font-semibold">About BitNest</p>
+        <p class="text-gray-400 font-semibold">Terms & Conditions</p>
+      </div>
+
+      <div
+        class="w-1/4 border-b border-gray-600 flex flex-col items-center justify-center gap-3"
+      >
+        <p class="text-gray-400 font-semibold">Market</p>
+        <p class="text-gray-400 font-semibold">Resources</p>
+        <p class="text-gray-400 font-semibold">Exchange</p>
+      </div>
+    </section>
+
+    <!-- Copyright -->
+    <section class="relative top-48 flex items-center justify-between px-8 py-5">
+      <p class="text-gray-500 font-semibold">
+        &copy 2024 Bitnest,All rights reserved.
+      </p>
+
+      <div class="social_icons flex items-center justify-center gap-3">
+        <svg
+          class="instagram size-6"
+          data-name="Layer 1"
+          id="Layer_1"
+          viewBox="0 0 128 128"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                fill: white;
+              }
+            </style>
+          </defs>
+          <title />
+          <path
+            class="cls-1"
+            d="M83,23a22,22,0,0,1,22,22V83a22,22,0,0,1-22,22H45A22,22,0,0,1,23,83V45A22,22,0,0,1,45,23H83m0-8H45A30.09,30.09,0,0,0,15,45V83a30.09,30.09,0,0,0,30,30H83a30.09,30.09,0,0,0,30-30V45A30.09,30.09,0,0,0,83,15Z"
+          />
+          <path
+            class="cls-1"
+            d="M90.14,32a5.73,5.73,0,1,0,5.73,5.73A5.73,5.73,0,0,0,90.14,32Z"
+          />
+          <path
+            class="cls-1"
+            d="M64.27,46.47A17.68,17.68,0,1,1,46.6,64.14,17.7,17.7,0,0,1,64.27,46.47m0-8A25.68,25.68,0,1,0,90,64.14,25.68,25.68,0,0,0,64.27,38.47Z"
+          />
+        </svg>
+
+        <svg
+          class="youtube size-5"
+          enable-background="new 0 0 32 32"
+          height="32px"
+          id="Layer_1"
+          version="1.0"
+          viewBox="0 0 32 32"
+          width="32px"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <g>
+            <path
+              d="M31.67,9.179c0,0-0.312-2.353-1.271-3.389c-1.217-1.358-2.58-1.366-3.205-1.443C22.717,4,16.002,4,16.002,4   h-0.015c0,0-6.715,0-11.191,0.347C4.171,4.424,2.809,4.432,1.591,5.79C0.633,6.826,0.32,9.179,0.32,9.179S0,11.94,0,14.701v2.588   c0,2.763,0.32,5.523,0.32,5.523s0.312,2.352,1.271,3.386c1.218,1.358,2.815,1.317,3.527,1.459C7.677,27.919,15.995,28,15.995,28   s6.722-0.012,11.199-0.355c0.625-0.08,1.988-0.088,3.205-1.446c0.958-1.034,1.271-3.386,1.271-3.386s0.32-2.761,0.32-5.523v-2.588   C31.99,11.94,31.67,9.179,31.67,9.179z"
+              fill="white"
+            />
+            <polygon fill="currentcolor" points="12,10 12,22 22,16  " />
+          </g>
+          <g />
+          <g />
+          <g />
+          <g />
+          <g />
+          <g />
+        </svg>
+
+        <svg
+          class="twitter size-4"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1200"
+          height="1227"
+          viewBox="0 0 1200 1227"
+        >
+          <g clip-path="url(#clip0_1_2)">
+            <path
+              d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_1_2">
+              <rect width="1200" height="1227" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+
+        <svg
+          class="facebook size-4"
+          fill="white"
+          height="100%"
+          style="
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            stroke-linejoin: round;
+            stroke-miterlimit: 2;
+          "
+          version="1.1"
+          viewBox="0 0 512 512"
+          width="100%"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:serif="http://www.serif.com/"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M374.244,285.825l14.105,-91.961l-88.233,0l0,-59.677c0,-25.159 12.325,-49.682 51.845,-49.682l40.116,0l0,-78.291c0,0 -36.407,-6.214 -71.213,-6.214c-72.67,0 -120.165,44.042 -120.165,123.775l0,70.089l-80.777,0l0,91.961l80.777,0l0,222.31c16.197,2.541 32.798,3.865 49.709,3.865c16.911,0 33.511,-1.324 49.708,-3.865l0,-222.31l74.128,0Z"
+            style="fill-rule: nonzero"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- <form method="get" onsubmit="handleForm()">
+            <input type="text" id="fullname" name="fullname" />
+            <input type="text" id="email" name="email" />
+            <input type="text" id="phone" name="phone" />
+            <button type="submit" class="bg-white text-black">Submit</button>
+          </form> -->
+
+    <!-- <div class="flex flex-col gap-4 border-2 border-white">
+            <div id="show" class="hidden text-white">Hello world</div>
+            <div class="flex gap-2">
+              <button onclick="showHide('show')" class="flex bg-white text-black">
+                Show hidden Text
+              </button>
+              <button onclick="showHide('hide')" class="bg-white text-black">
+                Hide Shown Text
+              </button>
+            </div>
+          </div> -->
+    <!-- <div id="container" class="mt-4 size-[5rem] bg-white"></div> -->
+    <script>
+      // function handleClick() {
+      //   const sayHello = document.getElementById("sayhello");
+      //   sayHello.innerText = "Hello Shyam";
+      // }
+
+      // function handleForm() {
+      //   const fullname = document.getElementById("fullname").value;
+      //   const email = document.getElementById("email").value;
+      //   const phone = document.getElementById("phone").value;
+
+      //   if (fullname.length <= 0 || fullname == "") {
+      //     alert("please enter your name");
+      //     return;
+      //   }
+      //   if (fullname.length < 3) {
+      //     alert("Name must be atleast 3 characters long");
+      //   }
+
+      //   console.log(fullname);
+      // }
+
+      // function showHide(nilisha) {
+      //   const container = document.getElementById("show");
+
+      //   if (nilisha == "show") {
+      //     container.classList.remove("hidden");
+      //     container.classList.add("flex");
+      //   }
+
+      //   if (nilisha === "hide") {
+      //     container.classList.remove("flex");
+      //     container.classList.add("hidden");
+      //   }
+      // }
+
+      // const container = document.getElementById("container");
+      // setInterval(() => {
+      //   container.classList.remove("bg-white");
+      //   container.classList.add("bg-red-500");
+
+      // }, 2000);
+
+      // setInterval(() => {
+      //   container.classList.remove("bg-white");
+      //   container.classList.add("bg-blue-500");
+      // }, 3000);
+    </script>
+  </body>
+</html>
